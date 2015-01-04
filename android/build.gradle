@@ -25,9 +25,6 @@ android {
     signingConfigs {
         release {
             storeFile file('mb3android.jks')
-            storePassword 'DSMRules1'
-            keyAlias 'mb3android'
-            keyPassword 'DSM4Ever'
         }
     }
 
