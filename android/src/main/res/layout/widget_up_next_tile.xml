@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#292a2c">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivNextUpItemImage"
+            android:layout_width="@dimen/next_up_image_width"
+            android:layout_height="@dimen/next_up_image_height"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/ivNextUpGradient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivNextUpItemImage"
+            android:layout_alignRight="@id/ivNextUpItemImage"
+            android:scaleType="fitXY" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llNextUpShowInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@+id/ivNextUpItemImage"
+        android:background="#292a2c"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNextUpItemSeries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="New Text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/next_up_title" />
+
+        <TextView
+            android:id="@+id/tvNextUpItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="New Text"
+            android:textSize="@dimen/next_up_series" />
+
+        <TextView
+            android:id="@+id/tvNextUpItemSeasonEpisode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="@dimen/next_up_season" />
+
+        <TextView
+            android:id="@+id/tvNextUpItemOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-thin"
+            android:lines="3"
+            android:text="New Text"
+            android:textSize="@dimen/next_up_overview"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

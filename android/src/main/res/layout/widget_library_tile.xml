@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#40bbbbbb">
+
+        <RelativeLayout
+            android:id="@+id/llTopContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivLibraryTilePrimaryImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="#30bbbbbb"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/llTextContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tvLibraryTileTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:maxLines="1"
+                    android:text="Title"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvLibraryTileSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLibraryTileTitle"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="Subtitle" />
+
+                <TextView
+                    android:id="@+id/tvLibraryTileInfoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLibraryTileSubTitle"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="InfoText" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivNewOverlay"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/llRatingContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/ivLibraryTileStarRating"
+                android:layout_width="94dp"
+                android:layout_height="19dp" />
+
+            <ImageView
+                android:id="@+id/ivLibraryTileRtImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="20dp"
+                android:maxWidth="20dp"
+                android:src="@drawable/fresh"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvLibraryTileRtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="0%"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pbPlaybackProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:progressDrawable="@drawable/greenprogress" />
+    </RelativeLayout>
+</LinearLayout>

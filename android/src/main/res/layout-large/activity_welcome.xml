@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/intro_watermark"/>
+
+    <ImageView
+        android:id="@+id/ivMediaBrowserLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerHorizontal="true"
+        android:maxHeight="75dp"
+        android:src="@drawable/mb_logo"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ivMediaBrowserLogo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:textSize="26sp"
+                android:text="@string/welcome_title"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/tvParagraph1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:textSize="20sp"
+                android:text="@string/welcome_paragraph"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/tvParagraph2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:text="@string/welcome_server_download_address"
+                android:autoLink="web"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="30dp"
+                android:text="@string/next_button_text"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

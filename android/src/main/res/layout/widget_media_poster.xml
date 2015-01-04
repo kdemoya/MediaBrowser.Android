@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/ivLibraryTilePrimaryImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside" />
+
+    <RelativeLayout
+        android:id="@+id/llTopContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/ivMediaOverflow"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginRight="4dp"-->
+            <!--android:layout_marginLeft="4dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/abc_ic_menu_moreoverflow_normal_holo_dark"-->
+            <!--android:background="@null"/>-->
+
+        <LinearLayout
+            android:id="@+id/llTextContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tvLibraryTileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:maxLines="1"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvLibraryTileSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLibraryTileTitle"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="Subtitle" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

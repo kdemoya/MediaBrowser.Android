@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:id="@+id/ivMediaBrowserLogo"
+        android:src="@drawable/mb_logo" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivMediaBrowserLogo"
+        android:gravity="center_horizontal"
+        android:text="Select a User..."
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvUserSelectionDescription" />
+
+    <GridView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/gvUsersGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_below="@id/tvUserSelectionDescription"
+        android:numColumns="3"
+        android:columnWidth="228dp"
+        android:stretchMode="spacingWidthUniform"
+        android:gravity="center_horizontal"
+        tools:listitem="@layout/tv_widget_user_tile" />
+
+</RelativeLayout>

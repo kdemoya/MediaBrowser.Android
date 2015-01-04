@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/header_padding"
+        android:layout_toLeftOf="@+id/ivIncognito"
+        android:layout_toStartOf="@+id/ivIncognito"
+        android:text="@string/select_mb_user"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-thin"/>
+
+    <ImageView
+        android:id="@+id/ivIncognito"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@+id/ivChangeServer"
+        android:layout_toStartOf="@+id/ivChangeServer"
+        android:layout_margin="@dimen/header_padding"
+        android:scaleType="centerCrop"
+        android:src="@drawable/incognito"/>
+
+    <ImageView
+        android:id="@+id/ivChangeServer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/header_padding"
+        android:scaleType="centerInside"
+        android:src="@drawable/server_icon"/>
+
+    <GridView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/gvUsersGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivChangeServer"
+        android:numColumns="@integer/user_columns"
+        tools:listitem="@layout/widget_user_tile"/>
+
+</RelativeLayout>

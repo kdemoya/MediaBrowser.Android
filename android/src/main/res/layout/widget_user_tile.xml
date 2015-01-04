@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llUserTile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/grid_item_outer_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30bbbbbb"
+        android:padding="@dimen/grid_item_inner_padding">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivUserTileImage"
+            android:layout_width="125dip"
+            android:layout_height="125dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginEnd="8dip"
+            android:contentDescription="@string/primary_image"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvUserTileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivUserTileImage"
+            android:layout_toEndOf="@+id/ivUserTileImage"
+            android:textSize="20sp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tvLastSeenValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivUserTileImage"
+            android:layout_toEndOf="@+id/ivUserTileImage"
+            android:layout_below="@id/tvUserTileName"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

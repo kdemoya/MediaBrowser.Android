@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/ivActorImageLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/tvActorBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="sans-serif-thin"
+        android:minLines="2"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

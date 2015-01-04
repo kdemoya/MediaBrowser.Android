@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Media Browser</string>
+    <string name="welcome_title">Velkommen til Media Browser</string>
+    <string name="welcome_paragraph">Med Media Browser kan du enkelt strømme videoer, musikk og bilder til Android og andre enheter fra din Media Browser Server.</string>
+    <string name="welcome_server_download_address">For å laste ned og installere Media Browser Server besøk http://mediabrowser.tv</string>
+    <string name="next_button_text">Neste</string>
+    <string name="title_activity_main">Media Browser</string>
+    <string name="mb_connect_welcome_text_with_url">Med &lt;a href=\'http://mediabrowser.tv/connect/\'&gt;Media Browser Connect&lt;/a&gt; kan du lett få tilgang til din Media Browser Server hvor enn du er og kan dele den med familie og venner.</string>
+    <string name="mb_connect_pin_entry_url_paragraph">For å logge inn med Media Browser Connect, besøk http://mediabrowser.tv/pin og skriv følgende pin-kode:</string>
+    <string name="mb_connect_sign_in_header">Logg inn med Media Browser Connect</string>
+    <string name="sign_in_button_text">Logg inn</string>
+    <string name="skip_button_text">Hopp over</string>
+    <string name="manual_connection_text">Koble til min server manuelt</string>
+    <!-- Common terms -->
+    <string name="play_all_action_bar_button">Spill alle</string>
+    <string name="shuffle_action_bar_button">Shuffle</string>
+    <string name="favorite_action_bar_button">Velg favoritt</string>
+    <string name="un_favorite_action_bar_button">Fjern favoritt</string>
+    <string name="played_action_bar_button">Velg avspilt</string>
+    <string name="un_played_action_bar_button">Fjerne avspilt</string>
+    <string name="instant_mix_string">Direktemiks</string>
+    <string name="overview_header">Oversikt</string>
+    <string name="seasons_header">Sesong</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Avbryt</string>
+    <string name="save">Lagre</string>
+    <string name="restart_button">Restart</string>
+    <string name="warning_string">Advarsel</string>
+    <string name="proceed_button">Fortsett</string>
+    <string name="playlist_string">Spilleliste</string>
+    <string name="like_string">Liker</string>
+    <string name="dislike_string">Misliker</string>
+    <string name="clear_rating_string">Fjern rangering</string>
+    <string name="playlist_add_string">Legg til spilleliste</string>
+    <string name="playlist_remove_string">Fjern fra spilleliste</string>
+    <string name="playlist_clear_string">tøm spilleliste</string>
+    <!-- First-Run Wizard -->
+    <string name="first_run_introduction">Siden dette er første gang du bruker Mediabrowser Android klient, kommer vi til å prøve og konfigurere alt automatisk for deg.</string>
+    <string name="first_run_single_discovered_server">Følgende server ble funnet. Trykk for å koble til eller ett langt trykk for å endre verdiene.</string>
+    <string name="first_run_multi_discovered_servers">De følgende serverne har blitt funnet. Velg den du ønsker å koble til eller ett langt trykk for å endre verdiene.</string>
+    <string name="first_run_no_servers_found">Ingen Mediabrowser-servere ble funnet. Klikk på knappen Ny tilkobling for å legge til serveren manuelt.</string>
+    <string name="first_run_connection_description">Skriv inn adressen til serveren for å koble til. Støttede adresseformater er:</string>
+    <string name="first_run_connection_error">Kan ikke koble til server</string>
+    <string name="add_connection_dialog_title">Legg til ny tilkobling</string>
+    <!-- Connection Status Messages -->
+    <string name="message_searching">Søker etter servere</string>
+    <string name="message_contacting">Kontakter</string>
+    <string name="message_contacting_wan">Forsøker å bruke WAN-adresse</string>
+    <string name="message_requesting_users">Henter brukerliste</string>
+    <string name="message_authenticating">Autentiserer</string>
+    <!-- Server Selection Fragment -->
+    <string name="add_connection">Ny tilkobling</string>
+    <string name="edit">Endre</string>
+    <string name="delete">Slett</string>
+    <string name="change_server">Bytt server</string>
+    <string name="select_mb_server">Velg en Media Browser server</string>
+    <!-- Widget Server Tile -->
+    <string name="connected">tilkoblet</string>
+    <!-- User Selection Fragment -->
+    <string name="manual_login">Manuell innlogging</string>
+    <string name="select_mb_user">Velg en bruker</string>
+    <!-- Widget User Tile -->
+    <string name="last_seen">"Sist sett"</string>
+    <string name="unknown">Ukjent</string>
+    <!-- Login dialog fragments -->
+    <string name="request_credentials_description">Tast inn dine innloggingsdetaljer.</string>
+    <string name="username_string">Brukernavn</string>
+    <string name="pin_hint">passord</string>
+    <string name="login_dialog_description">Tast inn passord for</string>
+    <string name="log_out_text">Klikk for å logge ut</string>
+    <!-- HomeScreen Activity -->
+    <string name="menu_home">Hjem</string>
+    <string name="settings_action_bar_button">Innstillinger</string>
+    <string name="news_action_bar_button">Nytt</string>
+    <string name="movies_header">Filmer</string>
+    <string name="tv_header">TV</string>
+    <string name="music_header">Musikk</string>
+    <string name="games_header">Spill</string>
+    <string name="live_tv_header">Direkte-TV</string>
+    <string name="channels_header">Kanaler</string>
+    <string name="favorites_header">Favoritter</string>
+    <string name="new_header">Ny</string>
+    <string name="next_up_header">Neste</string>
+    <string name="resume_header">Fortsette</string>
+    <string name="library_header">Bibliotek</string>
+    <string name="added_on_date">Lagt til den %s</string>
+    <!-- Media Details Activity -->
+    <string name="actors_header">Skuespillere</string>
+    <string name="play_action_bar_button">Spill av</string>
+    <string name="language_action_bar_button">Lyd og undertekst innstillinger</string>
+    <string name="resume_action_bar_button">Fortsette</string>
+    <string name="trailer_action_bar_button">Se trailer</string>
+    <string name="remote_play_action_bar_button">Fjernstyr avspilling</string>
+    <string name="popup_resume_title">Fortsettelsespunkt er tilgjengelig</string>
+    <string name="popup_play">Spill av fra begynnelsen</string>
+    <string name="popup_resume">Fortsette fra %s</string>
+    <!-- Media Playback Activity -->
+    <string name="audio_stream_selection">Velg lydspor</string>
+    <string name="subtitle_stream_selection">Velg undertekst strøm</string>
+    <string name="bitrate_selection">Velg maks bitrate</string>
+    <string name="toggle_media_info">Vis media informasjon</string>
+    <!-- Actor Bio Activity -->
+    <string name="bio_header">Bio</string>
+    <string name="media_header">Media</string>
+    <!-- Series Details Fragment -->
+    <string name="airs_string">Sendes</string>
+    <string name="aired_string">Ble sendt</string>
+    <string name="at_string">ved</string>
+    <string name="links_string">lenker</string>
+    <!-- Music Menu -->
+    <string name="on_stage_string">På scene</string>
+    <string name="artist_string">Artist</string>
+    <string name="albums_header">Album</string>
+    <string name="songs_string">Låter</string>
+    <string name="genres_string">Sjangere</string>
+    <!-- Rotten Tomatoes Activity -->
+    <string name="rotten_tomatoes_title">Rotten Tomatoes</string>
+    <string name="click_full_review">Merk for å se alt</string>
+    <!-- Remote Control Dialog Fragment -->
+    <string name="remote_control_title_string">Fjernkontroll</string>
+    <string name="clients_string">Klienter</string>
+    <string name="queue_string">Kø</string>
+    <string name="play_now_string">Spill nå</string>
+    <string name="play_next_string">Spill neste</string>
+    <string name="play_last_string">Spill siste</string>
+    <string name="timeline_string">Tidslinje</string>
+    <string name="play_from_beginning_string">Spill av fra begynnelsen</string>
+    <string name="resume_from_string">Fortsette fra</string>
+    <string name="order_string">Rekkefølge</string>
+    <string name="play_all_string">Spill alle</string>
+    <string name="shuffle_string">Shuffle</string>
+    <string name="play_button">Spill</string>
+    <string name="browse_button">Browse</string>
+    <!-- Server Connection Dialog Fragment -->
+    <string name="name">Navn</string>
+    <string name="my_mb3_library">Mitt MB3-bibliotek</string>
+    <string name="ip_address">Adresse</string>
+    <string name="internal_address">Intern adresse</string>
+    <string name="external_address">Ekstern adresse</string>
+    <string name="port">Port</string>
+    <string name="port_value">8096</string>
+    <string name="ip_hint">192.168.0.10</string>
+    <string name="address_conflict_description">Ovenstående adresse stemmer ikke overens med noen av de lagrede adresser for denne serveren. Vennligst velg adressen du ønsker å endre.</string>
+    <!-- Stream Selection Dialog Fragment -->
+    <string name="stream_selection_title_string">Velg den ønskede avspillings-strømmen(ene)</string>
+    <string name="language_string">Språk</string>
+    <string name="undefined_string">Ikke angitt</string>
+    <string name="unknown_language">ukjent</string>
+    <!-- preferences -->
+    <string name="settings_media_server">Media Server</string>
+    <string name="settings_manage_connections">Håndter tilkoblinger</string>
+    <string name="settings_manage_connections_summary">Klikk for å håndtere tilkoblinger</string>
+    <string name="settings_general">Generelt</string>
+    <string name="settings_homescreen">Startside</string>
+    <string name="settings_default_homescreen">Standard startside</string>
+    <string name="settings_default_homescreen_summary">Dette er fanen som vil bli vist som homescreen</string>
+    <string name="settings_show_collection_name">Vis samlingens navn</string>
+    <string name="settings_show_collection_name_summary_on">Samlingens navn vises</string>
+    <string name="settings_show_collection_name_summary_off">Samlingens navn vil ikke vises</string>
+    <string name="settings_show_collection_item_counts">Vis antall elementer</string>
+    <string name="settings_show_collection_item_counts_summary_on">Antallet i samlingen blir vist</string>
+    <string name="settings_show_collection_item_counts_summary_off">Antallet i samlingen blir ikke vist</string>
+    <string name="settings_library">Bibliotek</string>
+    <string name="settings_library_summary">Konfigurer innstilinger som angir hva som blir vist i bibliotek-modus</string>
+    <string name="settings_prefer_posters">Fortrukne postere</string>
+    <string name="settings_prefer_posters_summary_off">Thumbs vil bli vist i bibliotek-modus</string>
+    <string name="settings_prefer_posters_summary_on">Postere som blir vist i bibliotek-view</string>
+    <string name="settings_theme_songs">Slå på temasanger</string>
+    <string name="settings_theme_songs_summary_off">Temasanger vil ikke bli spilt av.</string>
+    <string name="settings_theme_songs_summary_on">Temasanger vil bli spilt av</string>
+    <string name="settings_playback">Spill av</string>
+    <string name="settings_playback_summary">Velg en bitrate brukt ved hvert scenario. Høyere er bedre(Ytelse avhenger av server-spesifikasjonen og tilgjengelig båndbredde.</string>
+    <string name="settings_hls">Støtte for HLS</string>
+    <string name="settings_hls_summary_off">HLS skrudd av</string>
+    <string name="settings_hls_summary_on">HLS skrudd på</string>
+    <string name="settings_lan_title">LAN/WIFI</string>
+    <string name="settings_lan_summary">Angi bitrate brukt til avspilling over LAN eller Wifi</string>
+    <string name="settings_lan_dialog">Birate for lokal avspilling</string>
+    <string name="settings_cellular_title">Mobilnettet</string>
+    <string name="settings_cellular_summary">Bitrate brukt til avspilling over 3G/4G-nettet</string>
+    <string name="settings_cellular_dialog">Birate brukt til avspilling over mobilnettet.</string>
+    <string name="settings_chromecast_title">Chromecast</string>
+    <string name="settings_chromecast_summary">Angi bitrate som brukes når det castes til Chromecast.</string>
+    <string name="settings_chromecast_dialog">Bitrate for Chromecast avspilling</string>
+    <string name="settings_external_player">Ekstern avspiller</string>
+    <string name="settings_external_player_summary_on">Ekstern avspiller vil bli brukt</string>
+    <string name="settings_external_player_summary_off">Bruk den interne avspilleren</string>
+    <string name="settings_info">Info</string>
+    <string name="settings_about">Om</string>
+    <string name="application_profile_mobile">Mobil</string>
+    <string name="application_profile_television">TV</string>
+    <string name="settings_subtitle_header">Undertekst størrelse</string>
+    <string name="settings_subtitle_description">Definer tekststørrelsen når undertekster vises. Har ingen effekt på undertekster brent inn i videoen</string>
+    <string name="settings_subtitle_largest">Størst</string>
+    <string name="settings_subtitle_large">Stor</string>
+    <string name="settings_subtitle_normal">Normal</string>
+    <string name="settings_subtitle_small">Liten</string>
+    <string name="settings_subtitle_smallest">Minst</string>
+    <string name="settings_server_image_enhancers">Bildeforbedring</string>
+    <string name="settings_image_enhancers_summary_on">Serverens bildeforbedring vil bli brukt</string>
+    <string name="settings_image_enhancers_summary_off">Serverern bildeforbedring vil ikke bli brukt</string>
+    <!-- Live TV -->
+    <string name="ltv_channels">Kanaler</string>
+    <string name="ltv_recordings">Opptak</string>
+    <string name="ltv_scheduled_recordings">Planlagt</string>
+    <string name="ltv_scheduled_series">Serier</string>
+    <string name="ltv_record_series">Ta opptak av serier</string>
+    <string name="ltv_days">Dager</string>
+    <string name="ltv_frequency">Frekvens</string>
+    <string name="ltv_record_only_new">Ta opptak kun av nye episoder</string>
+    <string name="ltv_record_anytime">Ta opptak når som helst</string>
+    <string name="ltv_record_all_channels">Ta opptak på alle kanaler</string>
+    <string name="ltv_pre_post_padding">Margin før/etter</string>
+    <string name="ltv_pre_padding_required">Margin før programstart kreves</string>
+    <string name="ltv_pre_padding_minutes">Margin før programstart i minutter</string>
+    <string name="ltv_post_padding_required">Margin etter programslutt kreves</string>
+    <string name="ltv_post_padding_minutes">Margin etter programslutt i minutter</string>
+    <string name="ltv_record_button">Ta opp program</string>
+    <string name="ltv_delete_recording">Slett opptak</string>
+    <string name="ltv_update_recording_button">Oppdater opptak</string>
+    <string name="ltv_cancel_recording">Avbryt opptak</string>
+    <string name="ltv_cancel_series">Avbryt serie</string>
+    <string name="ltv_watch_now">Se nå</string>
+    <!-- Channels -->
+    <string name="channels_no_content_warning">Ikke noe innhold mottatt</string>
+    <string name="channels_server_error">Feil under kommunikasjon med serveren</string>
+    <string name="no_scheduled_recordings">Ingen planlagte opptak</string>
+    <string name="no_listings_available">Ingen kanal oppføringer er tilgjengelige</string>
+    <string name="director_">Regisør:</string>
+    <string name="writer_">"Manus:"</string>
+    <string name="server_tile_icon">Server tile-ikon</string>
+    <string name="no_available_mb_server_warning">Ingen MediaBrowser-bibliotek ble funnet. Klikk ikonet over for å opprette en ny tilkobling.</string>
+    <string name="external_player_warning">Når avspilling skjer via en ekstern spiller, vil avspilling over mobilnettet sannsynligvis feile. Mediet blir strømmet direkte fremfor transcoded. Du vil heller ikke kunne følge avspillings-posisjonen.\r\n\r\nEr du sikker på at du vil tillate støtte for ekstern avspiller?</string>
+    <string name="no_content_warning">Innhold ikke tilgjengelig. Legg til media-bibliotek gjennom MediaBrowser Server Dashboard</string>
+    <string name="no_new_items_warning">Ingen elementer har nylig blitt lagt til.</string>
+    <string name="no_favorite_items_warning">Ingen elementer har blitt merket som favoritter.</string>
+    <string name="no_next_up_items_warning">Ingen nye episoder. Begynn å se litt TV!</string>
+    <string name="no_resumable_items_warning">Ingen elementer som kan fortsettes</string>
+    <string name="primary_image">Frontcover</string>
+    <string name="star_rating_image">Stjerner</string>
+    <string name="backdrop_image">Bakgrunnsbilde</string>
+    <string name="backdrop_overlay">Bakgrunnstrekk</string>
+    <string name="subtitle_stream">Undertekst-strøm</string>
+    <string name="audio_stream">Lydspor</string>
+    <string name="missing_overlay">MANGLER</string>
+    <string name="un_aired_overlay">Ikke sendt</string>
+    <string name="none">Ingen</string>
+    <string name="media_route_menu_title">Chromecast</string>
+    <!--
+    <string name="back_button">Back</string>-->
+    <!--
+    <string name="forward_button">Forward</string>-->
+    <!--
+    <string name="stop_button">Stop</string>-->
+    <string name="restart_warning">Programmet vil restarte for å gjøre de nødvendige endringene. Press restart for å fortsette.</string>
+    <string name="live">Direkte</string>
+    <string name="mirror_content">Speil innhold til denne enheten</string>
+    <!-- Title of the Error Dialog -->
+    <string name="error">Feil</string>
+    <!-- Shown in VideoCastController Activity -->
+    <string name="casting_to_device">Caster til %1$s</string>
+    <string name="loading">Laster&#8230;</string>
+    <!-- Used in Router Controller Dialog -->
+    <string name="no_media_info">Ingen medieinformasjon tilgjengelig</string>
+    <!-- Session Recovery Dialog message -->
+    <string name="session_reconnection_attempt">Forsøker å gjenopprette forrige sesjon&#8230;</string>
+    <!-- onApplicationConnectionFailed() errors -->
+    <string name="failed_to_launch_app">Kunne ikke starte programmet</string>
+    <string name="failed_app_launch_timeout">Forespørselen om å starte programmet er utløpt!</string>
+    <string name="failed_to_find_app">Programmet du prøver å starte er ikke tilgjengelig på din Chromecast enhet</string>
+    <!-- Error messages for the play.pause in mini player -->
+    <string name="failed_to_play">Kunne ikke starte avspilling av media</string>
+    <string name="failed_to_stop">Kunne ikke stoppe avspilling av media</string>
+    <string name="failed_to_pause">Kunne ikke sette avspillingen av media på pause</string>
+    <string name="failed_unknown">En ukjent feil oppstod</string>
+    <!-- Failures -->
+    <string name="failed_to_connect">Kunne ikke koble til enheten</string>
+    <string name="failed_setting_volume">Kunne ikke stille volumet</string>
+    <string name="failed_no_connection">Tilkoblingen til cast enheten er ikke tilstede</string>
+    <string name="failed_no_connection_short">Ingen tilkobling</string>
+    <string name="failed_no_connection_trans">Tilkobling til cast enheten har gått tapt. Applikasjonen prøver å re-etablere forbindelsen, hvis mulig. Vent i noen sekunder og prøv igjen.</string>
+    <string name="failed_perform_action">Kunne ikke utføre handlingen</string>
+    <string name="failed_status_request">Kunne ikke synkronisere med cast enheten</string>
+    <string name="failed_load">Kunne ikke laste medier på cast enheten</string>
+    <string name="failed_seek">Klarte ikke å søke til den nye posisjonen på cast enheten</string>
+    <string name="failed_receiver_player_error">Mottaker spiller har støtt på en serverfeil</string>
+    <string name="failed_authorization_timeout">Autorisasjon ble tidsavbrutt</string>
+</resources>

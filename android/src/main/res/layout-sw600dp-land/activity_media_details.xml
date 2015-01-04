@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewSwitcher
+        android:id="@+id/vsBackdropImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivMediaBackdrop1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/backdrop_image"
+            android:scaleType="centerCrop" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivMediaBackdrop2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/backdrop_image"
+            android:scaleType="centerCrop" />
+
+    </ViewSwitcher>
+
+    <ImageView
+        android:id="@+id/ivDetailsOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".90"
+        android:contentDescription="@string/backdrop_overlay"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_gradient_left3" />
+
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/miniController1">
+
+        <!-- Primary Content Frame -->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mediaPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/miniController1">
+
+            <android.support.v4.view.PagerTabStrip
+                android:id="@+id/pager_title_strip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:padding="@dimen/header_padding"
+                android:textColor="#00b4ff"
+                android:textSize="@dimen/header_text" />
+
+        </android.support.v4.view.ViewPager>
+
+        <!-- The Drawer -->
+        <fragment android:name="com.mb.android.fragments.NavigationMenuFragment"
+            android:id="@+id/left_drawer"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <com.mb.android.playbackmediator.widgets.MiniController
+        android:id="@+id/miniController1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow7"
+        android:visibility="gone" />
+
+</RelativeLayout>

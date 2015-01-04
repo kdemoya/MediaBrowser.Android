@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewSwitcher
+        android:id="@+id/vsBackdropImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </ViewSwitcher>
+
+    <ImageView
+        android:id="@+id/ivBackdropOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".40"
+        android:contentDescription="@string/backdrop_overlay"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_gradient_left3" />
+
+    <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+    off-screen. Margin values will be defined by the user in the settings fragment -->
+    <RelativeLayout
+        android:id="@+id/rlOverscanPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/btnUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/button_selector"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:focusable="true"
+                android:padding="2dp"/>
+
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/settings"
+                android:background="@drawable/button_selector"/>
+
+            <com.mb.android.widget.DigitalClock.DigitalClock
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="26sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="bottom"
+            android:layout_above="@+id/llSectionsGridContainer"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginStart="45dp"
+                android:text="Recently Added"
+                android:fontFamily="sans-serif"/>
+
+            <com.jess.ui.TwoWayGridView
+                android:id="@+id/gvRalGrid"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:nextFocusLeft="@+id/gvRalGrid"
+                android:nextFocusRight="@+id/gvRalGrid"
+                android:nextFocusUp="@+id/btnCategory"
+                android:nextFocusDown="@+id/gvSectionsGrid"
+                android:scrollbars="none"
+                app:cacheColorHint="#E8E8E8"
+                app:columnWidth="206dp"
+                app:rowHeight="240dp"
+                app:numColumns="auto_fit"
+                app:numRows="1"
+                app:verticalSpacing="1dp"
+                app:horizontalSpacing="1dp"
+                app:stretchMode="spacingWidthUniform"
+                app:scrollDirectionPortrait="vertical"
+                app:scrollDirectionLandscape="horizontal"
+                app:gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSectionsGridContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="#80000000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:orientation="horizontal"
+                android:background="#85ffffff"/>
+
+            <com.jess.ui.TwoWayGridView
+                android:id="@+id/gvSectionsGrid"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:nextFocusLeft="@+id/gvSectionsGrid"
+                android:nextFocusRight="@+id/gvSectionsGrid"
+                android:nextFocusUp="@+id/gvRalGrid"
+                android:paddingTop="1dp"
+                android:scrollbars="none"
+                app:cacheColorHint="#E8E8E8"
+                app:columnWidth="160dp"
+                app:rowHeight="43dp"
+                app:numColumns="auto_fit"
+                app:numRows="1"
+                app:verticalSpacing="1dp"
+                app:horizontalSpacing="1dp"
+                app:stretchMode="none"
+                app:scrollDirectionPortrait="vertical"
+                app:scrollDirectionLandscape="horizontal"
+                app:gravity="center"/>
+
+            <!--<org.lucasr.twowayview.widget.TwoWayView-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/listRootViews"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--app:twowayview_layoutManager="ListLayoutManager"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:orientation="horizontal"
+                android:background="#85ffffff"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

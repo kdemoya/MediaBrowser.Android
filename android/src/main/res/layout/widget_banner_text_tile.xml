@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="59dp"
+    android:layout_gravity="center_vertical"
+    android:padding="2dp">
+
+    <com.mb.android.widget.AnimatedNetworkImageView
+        android:id="@+id/ivBannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/tvViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMissingEpisodeOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff0000"
+        android:padding="2dp"
+        android:text="MISSING"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvOverlay"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/watched_circle"
+        android:gravity="center"
+        android:text="\u2714"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

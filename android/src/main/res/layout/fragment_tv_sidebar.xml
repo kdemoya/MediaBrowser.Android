@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/llPosterViewInfoPane"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center_horizontal"
+android:paddingTop="90dp"
+android:background="#70000000">
+
+    <TextView
+        android:id="@+id/tvMediaTitleSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="30sp"/>
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/ivLogoSide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_margin="10dp"
+        android:scaleType="centerInside"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <ImageView
+
+            android:id="@+id/ivStarImageSide"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ivCriticFreshRottenImageSide"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvRtRatingSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:id="@+id/tvMetaScoreSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#fff"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvReleaseYearSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:id="@+id/tvRatingSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:id="@+id/tvRuntimeSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMediaOverviewSide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif" />
+
+</LinearLayout>

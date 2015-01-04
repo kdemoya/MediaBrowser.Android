@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlBannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivLatestItemsHeaderImage"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/banner_placeholder"/>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/ivLatestItemsHeaderImage"
+            android:layout_toEndOf="@+id/ivLatestItemsHeaderImage"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:fontFamily="sans-serif"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivLatestItemsHeaderImage"
+            android:layout_toEndOf="@+id/ivLatestItemsHeaderImage"
+            android:layout_below="@+id/tvUserName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:text="Logout"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="or select users who are also here. "
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:padding="5dp"/>
+
+    <ListView
+        android:id="@+id/lvLatestItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

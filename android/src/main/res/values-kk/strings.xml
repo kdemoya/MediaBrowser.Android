@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Media Browser</string>
+    <string name="welcome_title">Media Browser бағдарламасына қош келдіңіз!</string>
+    <string name="welcome_paragraph">Media Browser арқылы Android және тағы басқа жабдықтарына бейнелерді, музыканы және фотосуреттерді Media Browser серверіңізден ағынмен жеңіл тасымалдауыңыз мүмкін</string>
+    <string name="welcome_server_download_address">Media Browser серверін жүктеп алу мен орнату үшін http://mediabrowser.tv сайтына барып шығыңыз.</string>
+    <string name="next_button_text">Келесі</string>
+    <string name="title_activity_main">Media Browser</string>
+    <string name="mb_connect_welcome_text_with_url">&lt;a href=\'http://mediabrowser.tv/connect/\'&gt;Media Browser Connect&lt;/a&gt; арқылы қайда болсаңыз да Media Browser серверіңізге жеңіл қатынасуыңыз және отбасыңызбен және достарыңызбен ортақтасуыңыз мүмкін..</string>
+    <string name="mb_connect_pin_entry_url_paragraph">Media Browser Connect арқылы кіру үшін, http://mediabrowser.tv/pin сайтын барып шығыңыз, және келесі PIN кодын енгізіңіз:</string>
+    <string name="mb_connect_sign_in_header">Media Browser Connect арқылы кіру</string>
+    <string name="sign_in_button_text">Кіру</string>
+    <string name="skip_button_text">Өткізіп жіберу</string>
+    <string name="manual_connection_text">Серверімге қолмен қосылу</string>
+    <!-- Common terms -->
+    <string name="play_all_action_bar_button">Бәрін ойнату</string>
+    <string name="shuffle_action_bar_button">Араластыру</string>
+    <string name="favorite_action_bar_button">Таңдаулыларға үстеу</string>
+    <string name="un_favorite_action_bar_button">Таңдаулылардан аластау</string>
+    <string name="played_action_bar_button">Қаралып шыққандарға үстеу</string>
+    <string name="un_played_action_bar_button">Қаралып шыққандардан аластау</string>
+    <string name="instant_mix_string">Лездік қоспа</string>
+    <string name="overview_header">Шолу</string>
+    <string name="seasons_header">Маусымдар</string>
+    <string name="ok_button">Жарайды</string>
+    <string name="cancel_button">Болдырмау</string>
+    <string name="save">Сақтау</string>
+    <string name="restart_button">Қайта іске қосу</string>
+    <string name="warning_string">Ескерту</string>
+    <string name="proceed_button">Жалғастыру</string>
+    <string name="playlist_string">Ойнату тізімі</string>
+    <string name="like_string">Ұнайды</string>
+    <string name="dislike_string">Ұнамайды</string>
+    <string name="clear_rating_string">Бағалауды тазарту</string>
+    <string name="playlist_add_string">Ойнату тізіміне үстеу</string>
+    <string name="playlist_remove_string">Ойнату тізімінен аластау</string>
+    <string name="playlist_clear_string">ойнату тізімін тазалау</string>
+    <!-- First-Run Wizard -->
+    <string name="first_run_introduction">Бұл MediaBrowser Android клиентін бастапқы пайдалану болғасын, біз сынап көру және бәрін автоматты түрде теңшеу үшін бағытталамыз.</string>
+    <string name="first_run_single_discovered_server">Келесі сервер табылды. Косылуды басыңыз немесе мәндерді өзгерту үшін ұзақ басыңыз.</string>
+    <string name="first_run_multi_discovered_servers">Келесі серверлер табылды. Қосылу үшін қалаған біреуін таңдаңыз немесе мәндерді өзгерту үшін ұзақ басыңыз.</string>
+    <string name="first_run_no_servers_found">MediaBrowser серверлері табылуы мүмкін емес. Серверді қолмен үстеу үшін Қосылым түймешігін басыңыз.</string>
+    <string name="first_run_connection_description">Қосылмақ сервердің мекенжайын енгізіңіз. Қолдаудағы мекенжай пішімдері мынадай:</string>
+    <string name="first_run_connection_error">Серверге қосылу мүмкіндігі болмады</string>
+    <string name="add_connection_dialog_title">Жаңа қосылымды үстеу</string>
+    <!-- Connection Status Messages -->
+    <string name="message_searching">Серверлерді іздеу</string>
+    <string name="message_contacting">Хабарласу</string>
+    <string name="message_contacting_wan">WAN мекенжайын пайдалану әрекеті жасалуда</string>
+    <string name="message_requesting_users">Пайдаланушыларға сауал салуда</string>
+    <string name="message_authenticating">Нақтылық тексерілуде</string>
+    <!-- Server Selection Fragment -->
+    <string name="add_connection">Қосылымды үстеу</string>
+    <string name="edit">Өңдеу</string>
+    <string name="delete">Жою</string>
+    <string name="change_server">Серверді ауыстыру</string>
+    <string name="select_mb_server">Media Browser серверін таңдау</string>
+    <!-- Widget Server Tile -->
+    <string name="connected">қосылған</string>
+    <!-- User Selection Fragment -->
+    <string name="manual_login">Қолмен кіру</string>
+    <string name="select_mb_user">Пайдаланушыны таңдау</string>
+    <!-- Widget User Tile -->
+    <string name="last_seen">"Ең соңғы рет болған"</string>
+    <string name="unknown">Белгісіз</string>
+    <!-- Login dialog fragments -->
+    <string name="request_credentials_description">Кіру үшін тіркелгі мәліметтерін енгізіңіз</string>
+    <string name="username_string">Пайдаланушы аты</string>
+    <string name="pin_hint">құпия сөз</string>
+    <string name="login_dialog_description">Мынаған құпия сөз енгізіңіз</string>
+    <string name="log_out_text">Шығу үшін нұқыңыз</string>
+    <!-- HomeScreen Activity -->
+    <string name="menu_home">Басты</string>
+    <string name="settings_action_bar_button">Параметрлер</string>
+    <string name="news_action_bar_button">Жаңалықтар</string>
+    <string name="movies_header">Фильмдер</string>
+    <string name="tv_header">ТД</string>
+    <string name="music_header">Музыка</string>
+    <string name="games_header">Ойындар</string>
+    <string name="live_tv_header">Эфирлік ТД</string>
+    <string name="channels_header">Арналар</string>
+    <string name="favorites_header">Таңдаулылар</string>
+    <string name="new_header">Жасау</string>
+    <string name="next_up_header">Кезектегілер</string>
+    <string name="resume_header">Жалғастыру</string>
+    <string name="library_header">Тасушыхана</string>
+    <string name="added_on_date">Қосылғаны %s</string>
+    <!-- Media Details Activity -->
+    <string name="actors_header">Актерлер</string>
+    <string name="play_action_bar_button">Ойнату</string>
+    <string name="language_action_bar_button">Дыбыс пен субтитрлер параметрлері</string>
+    <string name="resume_action_bar_button">Жалғастыру</string>
+    <string name="trailer_action_bar_button">Трейлерді ойнату</string>
+    <string name="remote_play_action_bar_button">Алыстан ойнату</string>
+    <string name="popup_resume_title">Жалғастыру нүктесі қол жетімді</string>
+    <string name="popup_play">Басынан бастап ойнату</string>
+    <string name="popup_resume">%s бастап жалғастыру</string>
+    <!-- Media Playback Activity -->
+    <string name="audio_stream_selection">Дыбыс ағынын таңдау</string>
+    <string name="subtitle_stream_selection">Субтитрлер ағынын таңдау</string>
+    <string name="bitrate_selection">Ең жоғары қарқынды таңдау</string>
+    <string name="toggle_media_info">Тасушыдеректер ақпарын көрсету</string>
+    <!-- Actor Bio Activity -->
+    <string name="bio_header">Өмірбаяны</string>
+    <string name="media_header">Тасушыдеректер</string>
+    <!-- Series Details Fragment -->
+    <string name="airs_string">Шығарылады</string>
+    <string name="aired_string">Шығарылған</string>
+    <string name="at_string">-</string>
+    <string name="links_string">байланыстар</string>
+    <!-- Music Menu -->
+    <string name="on_stage_string">Сахнада</string>
+    <string name="artist_string">Орындаушы</string>
+    <string name="albums_header">Альбомдар</string>
+    <string name="songs_string">Әуендер</string>
+    <string name="genres_string">Жанрлар</string>
+    <!-- Rotten Tomatoes Activity -->
+    <string name="rotten_tomatoes_title">Rotten Tomatoes</string>
+    <string name="click_full_review">Толық шолу үшін сипаңыз</string>
+    <!-- Remote Control Dialog Fragment -->
+    <string name="remote_control_title_string">Алыстан басқару</string>
+    <string name="clients_string">Клиенттер</string>
+    <string name="queue_string">Кезек</string>
+    <string name="play_now_string">Қазір ойнату</string>
+    <string name="play_next_string">Келесіні ойнату</string>
+    <string name="play_last_string">Соңғыны ойнату</string>
+    <string name="timeline_string">Уақыт шкаласы</string>
+    <string name="play_from_beginning_string">Басынан ойнату</string>
+    <string name="resume_from_string">Мынадан жалғастыру</string>
+    <string name="order_string">Реті</string>
+    <string name="play_all_string">Бәрін ойнату</string>
+    <string name="shuffle_string">Араластыру</string>
+    <string name="play_button">Ойнату</string>
+    <string name="browse_button">Шолу</string>
+    <!-- Server Connection Dialog Fragment -->
+    <string name="name">Аты</string>
+    <string name="my_mb3_library">Менің тасушыханам</string>
+    <string name="ip_address">Мекенжай</string>
+    <string name="internal_address">Ішкі мекенжай</string>
+    <string name="external_address">Сыртқы мекенжай</string>
+    <string name="port">Порт</string>
+    <string name="port_value">8096</string>
+    <string name="ip_hint">192.168.0.10</string>
+    <string name="address_conflict_description">Жоғарыдағы мекенжай осы сервердің ешбір сақталған мекенжайларына сәйкес келмейді. Жаңа мекенжайды таңдап жаңартыңыз.</string>
+    <!-- Stream Selection Dialog Fragment -->
+    <string name="stream_selection_title_string">Қалайтын ойнату ағын(дар)ын таңдаңыз</string>
+    <string name="language_string">Тіл</string>
+    <string name="undefined_string">айқындалмаған</string>
+    <string name="unknown_language">белгісіз</string>
+    <!-- preferences -->
+    <string name="settings_media_server">Тасушыдеректер сервері</string>
+    <string name="settings_manage_connections">Қосылымдарды басқару</string>
+    <string name="settings_manage_connections_summary">Қосылымдарды басқару үшін басыңыз</string>
+    <string name="settings_general">Жалпы</string>
+    <string name="settings_homescreen">Басты экран</string>
+    <string name="settings_default_homescreen">Әдепкі басты экран</string>
+    <string name="settings_default_homescreen_summary">Бұл басты экранда көрсетілетін әдепкі қойынды.</string>
+    <string name="settings_show_collection_name">Тасушы қалтасының атын көрсету</string>
+    <string name="settings_show_collection_name_summary_on">Тасушы қалтасының аты көрсетілген</string>
+    <string name="settings_show_collection_name_summary_off">Тасушы қалтасының аты көрсетілмейді</string>
+    <string name="settings_show_collection_item_counts">Элемент санын көрсету</string>
+    <string name="settings_show_collection_item_counts_summary_on">Тасушы қалтасы үшін еншілес саны көрсетіледі</string>
+    <string name="settings_show_collection_item_counts_summary_off">Тасушы қалтасы үшін еншілес саны көрсетілмейеді</string>
+    <string name="settings_library">Тасушыхана</string>
+    <string name="settings_library_summary">Тасушыханада қандай ақпарат көрсетілетіне әсер ететін параметрді теңшеу</string>
+    <string name="settings_prefer_posters">Постерлерді қалау</string>
+    <string name="settings_prefer_posters_summary_off">Нобайлар тасушыханада көрінеді</string>
+    <string name="settings_prefer_posters_summary_on">Постерлер тасушыханада көрінеді</string>
+    <string name="settings_theme_songs">Тақырыптық әуендерді қосу</string>
+    <string name="settings_theme_songs_summary_off">Тақырыптық әуендер ойнатылмайды</string>
+    <string name="settings_theme_songs_summary_on">Тақырыптық әуендер ойнатылады</string>
+    <string name="settings_playback">Ойнату</string>
+    <string name="settings_playback_summary">Әр сценариге пйдаланылатын қарқынды таңдаңыз. Жоғарылау деген жақсылау деп табылады. (Өнімділік сервердің спецификацияларына және қосылымның жылдамдығына тәуелді)</string>
+    <string name="settings_hls">HLS қолдау</string>
+    <string name="settings_hls_summary_off">HLS ажыратылған</string>
+    <string name="settings_hls_summary_on">HLS қосылған</string>
+    <string name="settings_lan_title">LAN/WIFI</string>
+    <string name="settings_lan_summary">LAN не Wif арқылы ойнатуда пайдаланылатын қарқынды анықтаңыз.</string>
+    <string name="settings_lan_dialog">Жергілікті ойнату қарқыны</string>
+    <string name="settings_cellular_title">Ұялы</string>
+    <string name="settings_cellular_summary">Жергілікті ойнату қарқыны</string>
+    <string name="settings_cellular_dialog">Ұялы ойнату қарқыны</string>
+    <string name="settings_chromecast_title">Chromecast</string>
+    <string name="settings_chromecast_summary">Chromecast үшін таратуда пайдаланылатын қарқынды анықтаңыз.</string>
+    <string name="settings_chromecast_dialog">Chromecast ойнату қарқыны</string>
+    <string name="settings_external_player">Сыртқы ойнатқыш</string>
+    <string name="settings_external_player_summary_on">Сыртқы ойнатқыш пайдаланылады</string>
+    <string name="settings_external_player_summary_off">Ішкі ойнатқыш</string>
+    <string name="settings_info">Ақпарат</string>
+    <string name="settings_about">Туралы</string>
+    <string name="application_profile_mobile">Ұтқырлық</string>
+    <string name="application_profile_television">Теледидарлық</string>
+    <string name="settings_subtitle_header">Субтитрлер өлшемі</string>
+    <string name="settings_subtitle_description">Субтитрлер бейнеленгендегі мәтін өлшемі анықталады. Бейнеге кірістірілген субтитрлерге ешқандай әсер етпейді.</string>
+    <string name="settings_subtitle_largest">Ең үлкен</string>
+    <string name="settings_subtitle_large">Үлкен</string>
+    <string name="settings_subtitle_normal">Кәдімгі</string>
+    <string name="settings_subtitle_small">Кіші</string>
+    <string name="settings_subtitle_smallest">Ең кіші</string>
+    <string name="settings_server_image_enhancers">Сурет кеңейткіштер</string>
+    <string name="settings_image_enhancers_summary_on">Серверлік суурет кеңейткіштері пайдаланылады</string>
+    <string name="settings_image_enhancers_summary_off">Серверлік суурет кеңейткіштері пайдаланылмайды</string>
+    <!-- Live TV -->
+    <string name="ltv_channels">Арналар</string>
+    <string name="ltv_recordings">Жазбалар</string>
+    <string name="ltv_scheduled_recordings">Жоспарлаған</string>
+    <string name="ltv_scheduled_series">Сериал</string>
+    <string name="ltv_record_series">Сериалды жазу</string>
+    <string name="ltv_days">Күндер</string>
+    <string name="ltv_frequency">Жиілігі</string>
+    <string name="ltv_record_only_new">Тек қана жаңа эпизодтарды жазу</string>
+    <string name="ltv_record_anytime">Әр уақыттада көрсетілімді жазу</string>
+    <string name="ltv_record_all_channels">Барлық арналарда көрсетілімді жазу</string>
+    <string name="ltv_pre_post_padding">Алға/Артқа шегініс</string>
+    <string name="ltv_pre_padding_required">Алға шегініс қажет</string>
+    <string name="ltv_pre_padding_minutes">Алға шегініс, мин</string>
+    <string name="ltv_post_padding_required">Артқа шегініс қажет</string>
+    <string name="ltv_post_padding_minutes">Артқа шегініс, мин</string>
+    <string name="ltv_record_button">Көрсетілімді жазу</string>
+    <string name="ltv_delete_recording">Жазбаны жою</string>
+    <string name="ltv_update_recording_button">Жазбаны жаңарту</string>
+    <string name="ltv_cancel_recording">Жазбаны болдырмау</string>
+    <string name="ltv_cancel_series">Сериалды болдырмау</string>
+    <string name="ltv_watch_now">Қазір қарау</string>
+    <!-- Channels -->
+    <string name="channels_no_content_warning">Ешқандай мазмұн қабылданбады</string>
+    <string name="channels_server_error">Сервермен байланысу қатесі</string>
+    <string name="no_scheduled_recordings">Жоспарлаған жазбалар жоқ</string>
+    <string name="no_listings_available">"Арналардың кестелері қол жетімді емес "</string>
+    <string name="director_">Режиссері:</string>
+    <string name="writer_">"Сценаристі: "</string>
+    <string name="server_tile_icon">Сервер қатарының белгішесі</string>
+    <string name="no_available_mb_server_warning">MediaBrowser тасушыханаларын табу мүмкін емес. Жаңа қосылымды үстеу үшін жоғарыдағы белгішені басыңыз.</string>
+    <string name="external_player_warning">Сыртқы ойнатқыш арқылы ойнатқанда, ұялы желімен ойнату сәтсіз болуы мүмкін. Қайта кодтаудың орнына тасушы ағынмен тасымалданады. Сонымен қатар ойнату жайғасымының бақылауы жоғалады. \r\n\r\nСыртқы ойнатқыш қолдауын шынымен қосу керек пе?</string>
+    <string name="no_content_warning">Ешқандай мазмұн қол жетімді емес. Media Browser Server Бақылау тақтасы арқылы жаңа тасушыханаларды үстеңіз.</string>
+    <string name="no_new_items_warning">Жақында элементтер үстелген жоқ.</string>
+    <string name="no_favorite_items_warning">Таңдаулы болып белгіленген элементтер жоқ.</string>
+    <string name="no_next_up_items_warning">Күтілген эпизодтар жоқ. Қайсыбір ТД қарай бастаңыз!</string>
+    <string name="no_resumable_items_warning">Жалғастырылатын элементтер жоқ.</string>
+    <string name="primary_image">Бастапқы сурет</string>
+    <string name="star_rating_image">Бағалауды жұлдыздармен көрсету</string>
+    <string name="backdrop_image">Артқы сурет</string>
+    <string name="backdrop_overlay">Артқы суретке жапсыру</string>
+    <string name="subtitle_stream">Субтитрлер ағыны</string>
+    <string name="audio_stream">Дыбыс ағыны</string>
+    <string name="missing_overlay">ЖОҚ</string>
+    <string name="un_aired_overlay">КӨРСЕТІЛМЕГЕН</string>
+    <string name="none">Ешқандай</string>
+    <string name="media_route_menu_title">Chromecast</string>
+    <!--
+    <string name="back_button">Back</string>-->
+    <!--
+    <string name="forward_button">Forward</string>-->
+    <!--
+    <string name="stop_button">Stop</string>-->
+    <string name="restart_warning">Қажет өзгерістерді жасау үшін қолданбаны қайта іске қосу керек. Жалғастыру үшін Қайта іске қосу түймешігін басыңыз.</string>
+    <string name="live">Тікелей</string>
+    <string name="mirror_content">Осы жабдықта мазмұнды айнадай бейнелеу</string>
+    <!-- Title of the Error Dialog -->
+    <string name="error">Қате</string>
+    <!-- Shown in VideoCastController Activity -->
+    <string name="casting_to_device">%1$s үшін таратуда</string>
+    <string name="loading">Жүктеуде&#8230;</string>
+    <!-- Used in Router Controller Dialog -->
+    <string name="no_media_info">Тасушыдеректер ақпараты қол жетімді емес</string>
+    <!-- Session Recovery Dialog message -->
+    <string name="session_reconnection_attempt">Алдыңғы сессияны қалыпына келтіру үшін талпынуда&#8230;</string>
+    <!-- onApplicationConnectionFailed() errors -->
+    <string name="failed_to_launch_app">Қолданбаны іске қосуы сәтсіз болды</string>
+    <string name="failed_app_launch_timeout">Қолданбы іске қосу сауалдың күту уақыты өтті</string>
+    <string name="failed_to_find_app">Іске қосуын байқап көргеніңіз қолданба Chromecast жабдығыңызда қол жетімді емес</string>
+    <!-- Error messages for the play.pause in mini player -->
+    <string name="failed_to_play">Тасушыдеректер ойнатуын бастау сәтсіз болды</string>
+    <string name="failed_to_stop">Тасушыдеректер ойнатуын тоқтату сәтсіз болды</string>
+    <string name="failed_to_pause">Тасушыдеректер ойнатуын тоқтата тұру сәтсіз болды</string>
+    <string name="failed_unknown">Белгісіз қате орын алды</string>
+    <!-- Failures -->
+    <string name="failed_to_connect">Жабдыққа қосылу мүмкін емес</string>
+    <string name="failed_setting_volume">Үнділікті орнату сәтсіз болды</string>
+    <string name="failed_no_connection">Таратушы жабдыққа қосылым көрсетілмеді</string>
+    <string name="failed_no_connection_short">Қосылым жоқ</string>
+    <string name="failed_no_connection_trans">Тарату жабдыққа қосылым жоғалған. Егер мүмкіндік болса, қолданба қосылымды қайта орнатуды байқап көруде.</string>
+    <string name="failed_perform_action">Әрекетті орындау сәтсіз болды</string>
+    <string name="failed_status_request">Таратушы жабдықпен синхрондау сәтсіз болды</string>
+    <string name="failed_load">Таратушы жабдыққа тасушыдеректерді жүктеу сәтсіз болды</string>
+    <string name="failed_seek">Таратушы жабдықта жаңа жайғасымға іріктеу сәтсіз болды</string>
+    <string name="failed_receiver_player_error">"Қабылдағыштың ойнатқышында серверлік қате орын алды "</string>
+    <string name="failed_authorization_timeout">Қатынас шегін айқындаудың күту уақыты өтті</string>
+</resources>

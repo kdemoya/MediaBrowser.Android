@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_bitrate_entries" translatable="false">
+        <item>250 Kb/s</item>
+        <item>450 Kb/s</item>
+        <item>650 Kb/s</item>
+        <item>850 Kb/s</item>
+        <item>1.0 Mb/s</item>
+        <item>1.4 Mb/s</item>
+        <item>1.8 Mb/s</item>
+        <item>2.2 Mb/s</item>
+        <item>2.6 Mb/s</item>
+        <item>3.0 Mb/s</item>
+        <item>4.0 Mb/s</item>
+        <item>5.0 Mb/s</item>
+        <item>6.0 Mb/s</item>
+        <item>7.0 Mb/s</item>
+        <item>8.0 Mb/s</item>
+        <item>9.0 Mb/s</item>
+        <item>10.0 Mb/s</item>
+        <item>11.0 Mb/s</item>
+        <item>12.0 Mb/s</item>
+        <item>13.0 Mb/s</item>
+        <item>14.0 Mb/s</item>
+        <item>15.0 Mb/s</item>
+        <item>16.0 Mb/s</item>
+        <item>17.0 Mb/s</item>
+        <item>18.0 Mb/s</item>
+        <item>19.0 Mb/s</item>
+        <item>20.0 Mb/s</item>
+        <item>21.0 Mb/s</item>
+    </string-array>
+
+    <string-array name="pref_bitrate_values" translatable="false">
+        <item>186000</item>
+        <item>386000</item>
+        <item>522000</item>
+        <item>722000</item>
+        <item>872000</item>
+        <item>1272000</item>
+        <item>1672000</item>
+        <item>2072000</item>
+        <item>2472000</item>
+        <item>2872000</item>
+        <item>3872000</item>
+        <item>4872000</item>
+        <item>5872000</item>
+        <item>6872000</item>
+        <item>7872000</item>
+        <item>8872000</item>
+        <item>9872000</item>
+        <item>10872000</item>
+        <item>11872000</item>
+        <item>12872000</item>
+        <item>13872000</item>
+        <item>14872000</item>
+        <item>15872000</item>
+        <item>16872000</item>
+        <item>17872000</item>
+        <item>18872000</item>
+        <item>19872000</item>
+        <item>20872000</item>
+    </string-array>
+
+    <string-array name="pref_homescreen_tab_names">
+        <item>@string/favorites_header</item>
+        <item>@string/new_header</item>
+        <item>@string/next_up_header</item>
+        <item>@string/resume_header</item>
+        <item>@string/library_header</item>
+    </string-array>
+
+    <string-array name="pref_homescreen_tab_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="pref_subtitle_size_entries">
+        <item>@string/settings_subtitle_largest</item>
+        <item>@string/settings_subtitle_large</item>
+        <item>@string/settings_subtitle_normal</item>
+        <item>@string/settings_subtitle_small</item>
+        <item>@string/settings_subtitle_smallest</item>
+    </string-array>
+
+    <string-array name="pref_subtitle_size_values" translatable="false">
+        <item>24</item>
+        <item>21</item>
+        <item>18</item>
+        <item>15</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="pref_application_profile_values">
+        <item>@string/application_profile_mobile</item>
+        <item>@string/application_profile_television</item>
+    </string-array>
+
+    <string-array name="prefs_volume_names" translatable="false">
+        <item>Device Volume</item>
+        <item>Stream Volume</item>
+    </string-array>
+
+    <!-- Do not translate below this line -->
+    <string-array name="prefs_volume_values" translatable="false">
+        <item>device</item>
+        <item>stream</item>
+    </string-array>
+</resources>

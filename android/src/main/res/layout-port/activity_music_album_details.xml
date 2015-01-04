@@ -1,0 +1,116 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Primary Content Frame -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivAlbumViewBackdrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivAlbumViewBackdrop"
+            android:layout_alignLeft="@+id/ivAlbumViewBackdrop"
+            android:layout_alignRight="@+id/ivAlbumViewBackdrop"
+            android:layout_alignTop="@+id/ivAlbumViewBackdrop"
+            android:scaleType="fitXY"
+            android:src="@drawable/music_gradient" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivAlbumCoverLarge"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignBottom="@+id/llAlbumInfo"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llAlbumInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivAlbumViewBackdrop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/ivAlbumCoverLarge"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAlbumViewAlbumName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/album_details_artist" />
+
+            <TextView
+                android:id="@+id/tvAlbumViewArtistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/album_details_artist" />
+
+            <TextView
+                android:id="@+id/tvAlbumReleaseYearValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/album_details_secondary_text" />
+
+            <TextView
+                android:id="@+id/tvAlbumGenresValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/album_details_secondary_text" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSongsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llAlbumInfo"
+            android:layout_gravity="center"
+            android:background="#30bbbbbb"
+            android:fontFamily="sans-serif-thin"
+            android:padding="@dimen/header_padding"
+            android:text="@string/songs_string"
+            android:textColor="#00b4ff"
+            android:textSize="@dimen/header_text" />
+
+        <ListView
+            android:id="@+id/lvTrackList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/miniController1"
+            android:layout_below="@+id/tvSongsHeader"
+            android:layout_margin="10dp" />
+
+        <com.mb.android.playbackmediator.widgets.MiniController
+            android:id="@+id/miniController1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shadow7"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!-- The Drawer -->
+    <fragment android:name="com.mb.android.fragments.NavigationMenuFragment"
+        android:id="@+id/left_drawer"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"/>
+
+</android.support.v4.widget.DrawerLayout>

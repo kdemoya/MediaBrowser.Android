@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTopContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#40bbbbbb"
+        android:padding="5dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivLibraryTilePrimaryImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="#30bbbbbb"
+            android:scaleType="centerInside"
+            android:src="@drawable/empty_banner" />
+
+        <TextView
+            android:id="@+id/tvLibraryTileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:text="Title"
+            android:textColor="@color/white"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:id="@+id/ivNewOverlay"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <ProgressBar
+            android:id="@+id/pbPlaybackProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/progress_bar_height"
+            android:layout_alignBottom="@id/ivLibraryTilePrimaryImage"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:progressDrawable="@drawable/greenprogress" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+

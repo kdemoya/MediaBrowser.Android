@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:padding="@dimen/grid_item_inner_padding">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivAlbumCover"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:maxHeight="125dp"
+            android:maxWidth="125dp"
+            android:scaleType="centerInside" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ivAlbumCover"
+            android:orientation="vertical"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/tvAlbumName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="@dimen/grid_item_primary_text"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/tvArtistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/grid_item_secondary_text"
+                android:fontFamily="sans-serif-thin"/>
+
+            <TextView
+                android:id="@+id/tvAlbumYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/grid_item_secondary_text"
+                android:fontFamily="sans-serif-thin" />
+
+        </LinearLayout>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/ibMediaOverflow"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="4dp"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@drawable/abc_ic_menu_moreoverflow_normal_holo_dark"-->
+            <!--android:background="@null"/>-->
+
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="server_columns">1</integer>
+    <integer name="user_columns">1</integer>
+    <integer name="library_columns">2</integer>
+    <integer name="library_columns_poster">3</integer>
+    <integer name="homescreen_item_columns">2</integer>
+    <integer name="tv_library_columns_poster">7</integer>
+    <integer name="season_columns">1</integer>
+    <integer name="actor_columns">1</integer>
+    <integer name="actor_media_columns_land">3</integer>
+    <integer name="next_up_columns">1</integer>
+    <integer name="max_item_width">266</integer>
+    <integer name="max_item_height">150</integer>
+</resources>

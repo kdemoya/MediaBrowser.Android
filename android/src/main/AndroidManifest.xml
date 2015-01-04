@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mb.android"
+    android:versionCode="14242138"
+    android:versionName="2.1.38">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Required to register a SyncStatusObserver to display a "syncing..." progress indicator. -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <!-- Required to enable our SyncAdapter after it's created. -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <!-- Required because we're manually creating a new account. -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:name=".MB3Application"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="com.mb.android.activities.mobile.SearchResultsActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".ui.main.ConnectionActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.main.WelcomeActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@android:style/Theme.Holo.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ui.main.MbConnectActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+
+        <activity android:name=".ui.mobile.homescreen.HomescreenActivity"/>
+
+        <activity
+            android:name=".ui.mobile.library.LibraryPresentationActivity"
+            android:parentActivityName=".ui.mobile.homescreen.HomescreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.mobile.homescreen.HomescreenActivity" />
+        </activity>
+
+        <activity android:name=".ui.mobile.music.MusicActivity"/>
+
+        <activity android:name=".ui.mobile.musicartist.ArtistActivity"/>
+
+        <activity android:name=".ui.mobile.album.MusicAlbumActivity"/>
+
+        <activity android:name="com.mb.android.activities.mobile.ChannelsActivity"/>
+
+        <activity android:name=".ui.mobile.livetv.ChannelListingsActivity"/>
+
+        <activity android:name=".ui.mobile.livetv.LiveTvActivity"/>
+
+        <activity android:name=".activities.mobile.ProgramDetailsActivity"/>
+
+        <activity android:name=".activities.mobile.PlaylistActivity"/>
+
+        <activity
+            android:name="com.mb.android.activities.mobile.MediaDetailsActivity"
+            android:parentActivityName=".ui.mobile.library.LibraryPresentationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.mobile.library.LibraryPresentationActivity" />
+        </activity>
+
+        <activity android:name=".ui.mobile.person.ActorBioActivity"/>
+
+        <activity android:name=".ui.main.SettingsActivity"/>
+
+        <activity android:name="com.mb.android.activities.mobile.NewsActivity"/>
+
+        <activity
+            android:name=".ui.mobile.playback.PlaybackActivity"
+            android:noHistory="true"
+            android:screenOrientation="sensorLandscape"/>
+
+        <activity
+            android:name=".ui.mobile.playback.AudioPlaybackActivity"
+            android:noHistory="true"/>
+
+        <activity android:name="com.mb.android.activities.mobile.SeriesViewActivity"/>
+
+        <activity android:name="com.mb.android.activities.mobile.PhotoDetailsActivity"/>
+
+        <activity android:name="com.mb.android.activities.mobile.BookDetailsActivity"/>
+
+        <activity android:name="com.mb.android.activities.mobile.RottenTomatoesActivity"/>
+
+        <activity
+            android:name="com.mb.android.activities.mobile.RemoteControlActivity"
+            android:parentActivityName="com.mb.android.activities.mobile.MediaDetailsActivity"
+            android:theme="@style/RemoteControlTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mb.android.activities.mobile.MediaDetailsActivity" />
+        </activity>
+
+        <activity android:name=".ui.main.AboutActivity"/>
+
+        <provider
+            android:authorities="com.mb.android.search.SearchHintContentProvider"
+            android:name="com.mb.android.search.SearchHintContentProvider">
+        </provider>
+
+        <activity
+            android:name="com.mb.android.activities.mobile.SearchResultsActivity"
+            android:label="searchResults"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <activity
+            android:name=".ui.tv.homescreen.HomeScreenActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.tv.library.LibraryActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.tv.mediadetails.MediaDetailsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.tv.boxset.BoxSetActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.tv.person.ActorDetailsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.OverscanActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.tv.playback.VideoPlayer"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.tv.playback.AudioPlayer"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <activity
+            android:name=".ui.tv.playback.PhotoPlayer"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+
+        <service
+            android:name="com.mb.android.playbackmediator.notification.VideoCastNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.sample.castcompanionlibrary.action.toggleplayback" />
+                <action android:name="com.google.sample.castcompanionlibrary.action.stop" />
+                <action android:name="com.google.sample.castcompanionlibrary.action.notificationvisibility" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.mb.android.receivers.ConnectivityStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.mb.android.playbackmediator.remotecontrol.VideoIntentReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="com.google.sample.castcompanionlibrary.action.toggleplayback" />
+                <action android:name="com.google.sample.castcompanionlibrary.action.stop" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ContentProvider to store feed data.
+        The "authorities" here are defined as part of a ContentProvider interface. It's used here
+        as an attachment point for the SyncAdapter. See res/xml/syncadapter.xml and
+        SyncService.java.
+        Since this ContentProvider is not exported, it will not be accessible outside of this app's
+        package. -->
+        <provider
+            android:name="mediabrowser.apiinteraction.android.sync.MediaContentProvider"
+            android:authorities="com.mediabrowser.sync"
+            android:exported="false"
+            android:syncable="true" />
+
+        <!-- This service implements our SyncAdapter. It needs to be exported, so that the system
+        sync framework can access it. -->
+        <service android:name="mediabrowser.apiinteraction.android.sync.MediaSyncService"
+                 android:exported="true">
+            <!-- This intent filter is required. It allows the system to launch our sync service
+            as needed. -->
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <!-- This points to a required XML file which describes our SyncAdapter. -->
+            <meta-data android:name="android.content.SyncAdapter"
+                       android:resource="@xml/syncadapter" />
+        </service>
+
+        <!-- This implements the account we'll use as an attachment point for our SyncAdapter. Since
+        our SyncAdapter doesn't need to authenticate the current user (it just fetches a public RSS
+        feed), this account's implementation is largely empty.
+        It's also possible to attach a SyncAdapter to an existing account provided by another
+        package. In that case, this element could be omitted here. -->
+        <service android:name="mediabrowser.apiinteraction.android.sync.AuthenticatorService">
+            <!-- Required filter used by the system to launch our account service. -->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <!-- This points to an XMLf ile which describes our account service. -->
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                       android:resource="@xml/authenticator" />
+        </service>
+
+    </application>
+
+</manifest>

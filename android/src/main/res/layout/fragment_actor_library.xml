@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gvActorMediaList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:numColumns="@integer/library_columns"
+    tools:listitem="@layout/widget_library_tile">
+
+</GridView>

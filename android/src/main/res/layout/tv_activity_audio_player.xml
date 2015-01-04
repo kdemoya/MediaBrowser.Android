@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewSwitcher
+        android:id="@+id/vsBackdropImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </ViewSwitcher>
+
+    <ImageView
+        android:id="@+id/ivBackdropOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".90"
+        android:contentDescription="@string/backdrop_overlay"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_gradient_left3" />
+
+    <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+        off-screen. Margin values will be defined by the user in the settings fragment -->
+    <RelativeLayout
+        android:id="@+id/rlOverscanPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_above="@+id/llDummyContainer"
+            android:layout_toLeftOf="@+id/lvPlayList"
+            android:layout_toStartOf="@+id/lvPlayList"
+            android:orientation="horizontal"
+            android:clipChildren="false">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivAlbumCover"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSongName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/tvArtistName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="23sp"
+                    android:fontFamily="sans-serif"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="#85ffffff"/>
+
+                <TextView
+                    android:id="@+id/tvAlbumName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="23sp"
+                    android:fontFamily="sans-serif"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="#85ffffff"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCurrentPosition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26sp"
+                        android:textColor="#ffffff"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26sp"
+                        android:text="  /  "
+                        android:textColor="#85ffffff"/>
+
+                    <TextView
+                        android:id="@+id/tvRuntime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26sp"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDummyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginEnd="100dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/llTransportControls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@drawable/rounded_underlay"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivPrevious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vp_prev_selector"
+                        android:focusable="true"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/ivRewind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vp_rw_selector"
+                        android:focusable="true"/>
+
+                    <ImageView
+                        android:id="@+id/ivPlayPause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vp_pause_selector"
+                        android:focusable="true"/>
+
+                    <ImageView
+                        android:id="@+id/ivFastForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vp_ff_selector"
+                        android:focusable="true"/>
+
+                    <ImageView
+                        android:id="@+id/ivNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vp_next_selector"
+                        android:focusable="true"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivDislike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vp_dislike_selector"
+                        android:focusable="true"/>
+
+                    <ImageView
+                        android:id="@+id/ivLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vp_like_selector"
+                        android:focusable="true"/>
+
+                    <ImageView
+                        android:id="@+id/ivFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vp_favorite_selector"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivPlaylistSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vp_playlist_selector"
+                        android:focusable="true"/>
+
+                    <ImageView
+                        android:id="@+id/ivAudioMute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vp_mute_selector"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvPlayList"
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="40dp"
+            android:background="@drawable/rounded_underlay"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

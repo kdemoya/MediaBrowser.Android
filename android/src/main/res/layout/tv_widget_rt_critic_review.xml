@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_gridview_selector"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:alpha=".7"
+        android:background="#000">
+
+        <ImageView
+            android:id="@+id/ivCriticFreshRottenImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/fresh" />
+
+        <TextView
+            android:id="@+id/tvCriticReview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/ivCriticFreshRottenImage"
+            android:ellipsize="end"
+            android:layout_above="@+id/tvReviewInfo"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tvReviewInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:layout_marginRight="5dp" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

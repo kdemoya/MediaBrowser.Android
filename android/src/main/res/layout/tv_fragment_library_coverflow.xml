@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/gvContent"
+            android:paddingLeft="25dp"
+            android:paddingTop="25dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="35"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tvMediaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvEpisodeIndexes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="40dp"
+                        android:textSize="16sp"
+                        android:textColor="#E8E8E8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"/>
+
+                    <TextView
+                        android:id="@+id/tvAiringInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16sp"
+                        android:textColor="#E8E8E8"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:visibility="gone"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivStarImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerInside"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ivCriticFreshRottenImage"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerInside"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tvRtRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#fff"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:fontFamily="sans-serif-condensed"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"/>
+
+                    <TextView
+                        android:id="@+id/tvMetaScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="#fff"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ivOfficialRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tvOfficialRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="#fff"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/svOverviewScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:requiresFadingEdge="vertical"
+                    android:fadingEdgeLength="20dp"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/tvMediaOverview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"/>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <!-- This empty layout exists purely to keep the above linear layout a layout to "weight" against -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="65"/>
+
+        </LinearLayout>
+
+        <com.jess.ui.TwoWayGridView
+            android:id="@+id/gvContent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:listSelector="@android:color/transparent"
+            android:nextFocusUp="@+id/svOverviewScrollView"
+            app:cacheColorHint="#E8E8E8"
+            app:columnWidth="206dp"
+            app:rowHeight="130dp"
+            app:numColumns="auto_fit"
+            app:numRows="1"
+            app:verticalSpacing="1dp"
+            app:horizontalSpacing="1dp"
+            app:stretchMode="spacingWidthUniform"
+            app:scrollDirectionPortrait="vertical"
+            app:scrollDirectionLandscape="horizontal"
+            app:gravity="center_horizontal"
+            android:visibility="invisible"/>
+
+</RelativeLayout>

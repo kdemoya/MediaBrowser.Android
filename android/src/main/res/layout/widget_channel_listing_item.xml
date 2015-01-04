@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="12:00 AM"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:id="@+id/tvListingStartTime"
+        android:typeface="monospace" />
+
+    <RelativeLayout
+        android:id="@+id/rlBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:id="@+id/tvListingTitle"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvListingTitle"
+            android:layout_marginRight="10dp"
+            android:text="New"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:id="@+id/tvListingNew"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:id="@+id/tvListingRuntime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvListingTitle"
+            android:layout_toRightOf="@+id/tvListingNew"
+            android:text="120 min"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-thin"/>
+
+        <ImageView
+            android:id="@+id/ivListingRecordingStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/record_series_icon" />
+
+    </RelativeLayout>
+
+</LinearLayout>

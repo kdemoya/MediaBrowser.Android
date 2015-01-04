@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Media Browser</string>
+    <string name="welcome_title">Welcome to Media Browser</string>
+    <string name="welcome_paragraph">With Media Browser you can easily stream videos, music and photos to Android and other devices from your Media Browser Server.</string>
+    <string name="welcome_server_download_address">To download and install Media Browser Server visit http://mediabrowser.tv</string>
+    <string name="next_button_text">Next</string>
+    <string name="title_activity_main">Media Browser</string>
+    <string name="mb_connect_welcome_text_with_url">With <a href='http://mediabrowser.tv/connect/'>Media Browser Connect</a> you can easily access your Media Browser Server wherever you are and share with your family and friends.</string>
+    <string name="mb_connect_pin_entry_url_paragraph">To sign in with Media Browser Connect, visit http://mediabrowser.tv/pin and enter the following pin code:</string>
+    <string name="mb_connect_sign_in_header">Sign in with Media Browser Connect</string>
+    <string name="sign_in_button_text">Sign In</string>
+    <string name="skip_button_text">Skip</string>
+    <string name="manual_connection_text">Connect to my server manually</string>
+
+    <!-- Common terms -->
+    <string name="play_all_action_bar_button">Play All</string>
+    <string name="shuffle_action_bar_button">Shuffle</string>
+    <string name="favorite_action_bar_button">Set Favorite</string>
+    <string name="un_favorite_action_bar_button">Remove Favorite</string>
+    <string name="played_action_bar_button">Set Played</string>
+    <string name="un_played_action_bar_button">Remove Played</string>
+    <string name="instant_mix_string">Instant Mix</string>
+    <string name="overview_header">Overview</string>
+    <string name="seasons_header">Seasons</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save">Save</string>
+    <string name="restart_button">Restart</string>
+    <string name="warning_string">Warning</string>
+    <string name="proceed_button">Proceed</string>
+    <string name="playlist_string">Playlist</string>
+    <string name="like_string">Like</string>
+    <string name="dislike_string">Dislike</string>
+    <string name="clear_rating_string">Clear Rating</string>
+    <string name="playlist_add_string">Add to Playlist</string>
+    <string name="playlist_remove_string">Remove from Playlist</string>
+    <string name="playlist_clear_string">clear playlist</string>
+
+    <!-- First-Run Wizard -->
+    <string name="first_run_introduction">Since this is your first time using the MediaBrowser Android client, we\'re going to try and configure everything automatically for you.</string>
+    <string name="first_run_single_discovered_server">The following server was found. Press to connect or long-press to change values.</string>
+    <string name="first_run_multi_discovered_servers">The following servers have been found. Select the one you\'d like to connect to or long-press to change values.</string>
+    <string name="first_run_no_servers_found">No MediaBrowser servers could be located. Click the Add Connection button to manually add your server.</string>
+    <string name="first_run_connection_description">Enter the address of the server to connect to. Supported address formats are:</string>
+    <string name="first_run_connection_error">Unable to connect to server</string>
+    <string name="add_connection_dialog_title">Add new connection</string>
+
+    <!-- Connection Status Messages -->
+    <string name="message_searching">Searching for servers</string>
+    <string name="message_contacting">Contacting</string>
+    <string name="message_contacting_wan">Attempting using WAN address</string>
+    <string name="message_requesting_users">Requesting users</string>
+    <string name="message_authenticating">Authenticating</string>
+
+    <!-- Server Selection Fragment -->
+    <string name="add_connection">Add Connection</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="change_server">Change Server</string>
+    <string name="select_mb_server">Select a Media Browser server</string>
+
+    <!-- Widget Server Tile -->
+    <string name="connected">connected</string>
+
+    <!-- User Selection Fragment -->
+    <string name="manual_login">Manual Login</string>
+    <string name="select_mb_user">Select a User</string>
+
+    <!-- Widget User Tile -->
+    <string name="last_seen">Last Seen</string>
+    <string name="unknown">Unknown</string>
+
+    <!-- Login dialog fragments -->
+    <string name="request_credentials_description">Please enter credentials to login</string>
+    <string name="username_string">Username</string>
+    <string name="pin_hint">password</string>
+    <string name="login_dialog_description">Please enter password for</string>
+    <string name="log_out_text">Click to log out</string>
+
+    <!-- HomeScreen Activity -->
+    <string name="menu_home">Home</string>
+    <string name="settings_action_bar_button">Settings</string>
+    <string name="news_action_bar_button">News</string>
+    <string name="movies_header">Movies</string>
+    <string name="tv_header">TV</string>
+    <string name="music_header">Music</string>
+    <string name="games_header">Games</string>
+    <string name="live_tv_header">Live TV</string>
+    <string name="channels_header">Channels</string>
+    <string name="favorites_header">Favorites</string>
+    <string name="new_header">New</string>
+    <string name="next_up_header">Next Up</string>
+    <string name="resume_header">Resume</string>
+    <string name="library_header">Library</string>
+    <string name="added_on_date">Added on %s</string>
+
+    <!-- Media Details Activity -->
+    <string name="actors_header">Actors</string>
+    <string name="play_action_bar_button">Play</string>
+    <string name="language_action_bar_button">Audio and Subtitle Settings</string>
+    <string name="resume_action_bar_button">Resume</string>
+    <string name="trailer_action_bar_button">Play Trailer</string>
+    <string name="remote_play_action_bar_button">Remote Play</string>
+    <string name="popup_resume_title">Resume point available</string>
+    <string name="popup_play">Play from beginning</string>
+    <string name="popup_resume">Resume from %s</string>
+
+    <!-- Media Playback Activity -->
+    <string name="audio_stream_selection">Select audio stream</string>
+    <string name="subtitle_stream_selection">Select subtitle stream</string>
+    <string name="bitrate_selection">Select maximum bitrate</string>
+    <string name="toggle_media_info">Show media info</string>
+
+    <!-- Actor Bio Activity -->
+    <string name="bio_header">Bio</string>
+    <string name="media_header">Media</string>
+
+    <!-- Series Details Fragment -->
+    <string name="airs_string">Airs</string>
+    <string name="aired_string">Aired</string>
+    <string name="at_string">at</string>
+    <string name="links_string">links</string>
+
+    <!-- Music Menu -->
+    <string name="on_stage_string">On Stage</string>
+    <string name="artist_string">Artist</string>
+    <string name="albums_header">Albums</string>
+    <string name="songs_string">Songs</string>
+    <string name="genres_string">Genres</string>
+
+    <!-- Rotten Tomatoes Activity -->
+    <string name="rotten_tomatoes_title">Rotten Tomatoes</string>
+    <string name="click_full_review">Touch for full review</string>
+
+    <!-- Remote Control Dialog Fragment -->
+    <string name="remote_control_title_string">Remote Control</string>
+    <string name="clients_string">Clients</string>
+    <string name="queue_string">Queue</string>
+    <string name="play_now_string">Play now</string>
+    <string name="play_next_string">Play next</string>
+    <string name="play_last_string">Play last</string>
+    <string name="timeline_string">Timeline</string>
+    <string name="play_from_beginning_string">Play from beginning</string>
+    <string name="resume_from_string">Resume from</string>
+    <string name="order_string">Order</string>
+    <string name="play_all_string">Play all</string>
+    <string name="shuffle_string">Shuffle</string>
+    <string name="play_button">Play</string>
+    <string name="browse_button">Browse</string>
+
+    <!-- Server Connection Dialog Fragment -->
+    <string name="name">Name</string>
+    <string name="my_mb3_library">My MB3 Library</string>
+    <string name="ip_address">Address</string>
+    <string name="internal_address">Internal Address</string>
+    <string name="external_address">External Address</string>
+    <string name="port">Port</string>
+    <string name="port_value">8096</string>
+    <string name="ip_hint">192.168.0.10</string>
+    <string name="address_conflict_description">The above address does not match either of the stored addresses for this server. Please select the address you would like to update to the new address</string>
+
+    <!-- Stream Selection Dialog Fragment -->
+    <string name="stream_selection_title_string">Select the desired playback stream(s)</string>
+    <string name="language_string">Language</string>
+    <string name="undefined_string">undefined</string>
+    <string name="unknown_language">unknown</string>
+
+    <!-- preferences -->
+    <string name="settings_media_server">Media Server</string>
+    <string name="settings_manage_connections">Manage Connections</string>
+    <string name="settings_manage_connections_summary">Click to manage connections</string>
+    <string name="settings_general">General</string>
+    <string name="settings_homescreen">Homescreen</string>
+    <string name="settings_default_homescreen">Default Homescreen</string>
+    <string name="settings_default_homescreen_summary">This is the default tab that will be shown for the homescreen</string>
+    <string name="settings_show_collection_name">Show Collection Name</string>
+    <string name="settings_show_collection_name_summary_on">Collection name is shown</string>
+    <string name="settings_show_collection_name_summary_off">Collection name will not be shown</string>
+    <string name="settings_show_collection_item_counts">Show Item Counts</string>
+    <string name="settings_show_collection_item_counts_summary_on">Children count for Collections will be shown</string>
+    <string name="settings_show_collection_item_counts_summary_off">Children count for Collections will not be shown</string>
+    <string name="settings_library">Library</string>
+    <string name="settings_library_summary">Configure setting that affect what info is shown in library views</string>
+    <string name="settings_prefer_posters">Prefer Posters</string>
+    <string name="settings_prefer_posters_summary_off">Thumbs will be shown in library views</string>
+    <string name="settings_prefer_posters_summary_on">Posters will be shown in library views</string>
+    <string name="settings_theme_songs">Enable Theme Songs</string>
+    <string name="settings_theme_songs_summary_off">Theme songs will not be played</string>
+    <string name="settings_theme_songs_summary_on">Theme songs will be played</string>
+    <string name="settings_playback">Playback</string>
+    <string name="settings_playback_summary">Select a bitrate used for each scenario. Higher is better. (Performance depends on server specifications and available connection speed)</string>
+    <string name="settings_hls">HLS Support</string>
+    <string name="settings_hls_summary_off">HLS disabled</string>
+    <string name="settings_hls_summary_on">HLS enabled</string>
+    <string name="settings_lan_title">LAN/WIFI</string>
+    <string name="settings_lan_summary">Specify the bitrate used when playing over LAN or Wifi.</string>
+    <string name="settings_lan_dialog">Local Playback Bitrate</string>
+    <string name="settings_cellular_title">Cellular</string>
+    <string name="settings_cellular_summary">Specify the bitrate used when playing over 3G/4G.</string>
+    <string name="settings_cellular_dialog">Cellular Playback Bitrate</string>
+    <string name="settings_chromecast_title">Chromecast</string>
+    <string name="settings_chromecast_summary">Specify the bitrate used when casting to Chromecast.</string>
+    <string name="settings_chromecast_dialog">Chromecast Playback Bitrate</string>
+    <string name="settings_external_player">External Player</string>
+    <string name="settings_external_player_summary_on">External player will be used</string>
+    <string name="settings_external_player_summary_off">Use internal player</string>
+    <string name="settings_info">Info</string>
+    <string name="settings_about">About</string>
+    <string name="application_profile_mobile">Mobile</string>
+    <string name="application_profile_television">Television</string>
+    <string name="settings_subtitle_header">Subtitle Size</string>
+    <string name="settings_subtitle_description">Define the text size when subtitles are displayed. Has no effect on subtitles burned into the video</string>
+    <string name="settings_subtitle_largest">Largest</string>
+    <string name="settings_subtitle_large">Large</string>
+    <string name="settings_subtitle_normal">Normal</string>
+    <string name="settings_subtitle_small">Small</string>
+    <string name="settings_subtitle_smallest">Smallest</string>
+    <string name="settings_server_image_enhancers">Image Enhancers</string>
+    <string name="settings_image_enhancers_summary_on">Server image enhancers will be used</string>
+    <string name="settings_image_enhancers_summary_off">Server image enhancers will not be used</string>
+
+    <!-- Live TV -->
+    <string name="ltv_channels">Channels</string>
+    <string name="ltv_recordings">Recordings</string>
+    <string name="ltv_scheduled_recordings">Scheduled</string>
+    <string name="ltv_scheduled_series">Series</string>
+    <string name="ltv_record_series">Record Series</string>
+    <string name="ltv_days">Days</string>
+    <string name="ltv_frequency">Frequency</string>
+    <string name="ltv_record_only_new">Record only new episodes</string>
+    <string name="ltv_record_anytime">Record program at any time</string>
+    <string name="ltv_record_all_channels">Record program on all channels</string>
+    <string name="ltv_pre_post_padding">Pre/Post Padding</string>
+    <string name="ltv_pre_padding_required">Pre-padding is required</string>
+    <string name="ltv_pre_padding_minutes">Pre-padding minutes</string>
+    <string name="ltv_post_padding_required">Post-padding is required</string>
+    <string name="ltv_post_padding_minutes">Post-padding minutes</string>
+    <string name="ltv_record_button">Record Program</string>
+    <string name="ltv_delete_recording">Delete Recording</string>
+    <string name="ltv_update_recording_button">Update Recording</string>
+    <string name="ltv_cancel_recording">Cancel Recording</string>
+    <string name="ltv_cancel_series">Cancel Series</string>
+    <string name="ltv_watch_now">Watch now</string>
+
+    <!-- Channels -->
+    <string name="channels_no_content_warning">No content received</string>
+    <string name="channels_server_error">Error communicating with server</string>
+    <string name="no_scheduled_recordings">No scheduled recordings</string>
+    <string name="no_listings_available">No channel listings available</string>
+
+    <string name="director_">Director:</string>
+    <string name="writer_">"Writer: "</string>
+    <string name="server_tile_icon">Server Tile Icon</string>
+    <string name="no_available_mb_server_warning">No MediaBrowser libraries could be found. Click the icon above to add a new connection.</string>
+    <string name="external_player_warning">When playing through an external player, playback over cellular will likely fail. The media is direct streamed rather than transcoded. You will also lose playback position tracking. \r\n \r\nAre you sure you want to enable external player support?</string>
+    <string name="no_content_warning">No content available. Add media libraries through the MediaBrowser Server Dashboard.</string>
+    <string name="no_new_items_warning">No items recently added.</string>
+    <string name="no_favorite_items_warning">No items marked as favorites.</string>
+    <string name="no_next_up_items_warning">No upcoming episodes. Start watching some TV!</string>
+    <string name="no_resumable_items_warning">No resumable items.</string>
+    <string name="primary_image">Primary Image</string>
+    <string name="star_rating_image">Star Rating</string>
+    <string name="backdrop_image">Backdrop Image</string>
+    <string name="backdrop_overlay">Backdrop Overlay</string>
+    <string name="subtitle_stream">Subtitle Stream</string>
+    <string name="audio_stream">Audio Stream</string>
+    <string name="missing_overlay">MISSING</string>
+    <string name="un_aired_overlay">UNAIRED</string>
+    <string name="none">None</string>
+    <string name="media_route_menu_title">Chromecast</string>
+    <!--<string name="back_button">Back</string>-->
+    <!--<string name="forward_button">Forward</string>-->
+    <!--<string name="stop_button">Stop</string>-->
+    <string name="restart_warning">The application needs to relaunch to make the required changes. Press restart to continue.</string>
+
+    <string name="live">Live</string>
+    <string name="mirror_content">Mirror content to this device</string>
+
+    <!-- Title of the Error Dialog -->
+    <string name="error">Error</string>
+
+    <!-- Shown in VideoCastController Activity -->
+    <string name="casting_to_device">Casting to %1$s</string>
+    <string name="loading">Loading&#8230;</string>
+
+    <!-- Used in Router Controller Dialog -->
+    <string name="no_media_info">No media information available</string>
+
+    <!-- Session Recovery Dialog message -->
+    <string name="session_reconnection_attempt">Attempting to recover previous session&#8230;</string>
+
+    <!-- onApplicationConnectionFailed() errors -->
+    <string name="failed_to_launch_app">Failed to launch application</string>
+    <string name="failed_app_launch_timeout">The request to launch the application has timed out!</string>
+    <string name="failed_to_find_app">The application you are trying to launch is not available on your Chromecast device</string>
+
+    <!-- Error messages for the play.pause in mini player -->
+    <string name="failed_to_play">Failed to start the playback of media</string>
+    <string name="failed_to_stop">Failed to stop the playback of media</string>
+    <string name="failed_to_pause">Failed to pause the playback of media</string>
+    <string name="failed_unknown">An unknown error was encountered</string>
+
+    <!-- Failures -->
+    <string name="failed_to_connect">Could not connect to the device</string>
+    <string name="failed_setting_volume">Failed to set the volume</string>
+    <string name="failed_no_connection">No connection to the cast device is present</string>
+    <string name="failed_no_connection_short">No connection</string>
+    <string name="failed_no_connection_trans">Connection to the cast device has been lost. Application is trying to re-establish the connection, if possible. Please wait for a few seconds and try again.</string>
+    <string name="failed_perform_action">Failed to perform the action</string>
+    <string name="failed_status_request">Failed to sync up with the cast device</string>
+    <string name="failed_load">Failed to load media on the cast device</string>
+    <string name="failed_seek">Failed to seek to the new position on the cast device</string>
+    <string name="failed_receiver_player_error">Receiver player has encountered a server error</string>
+    <string name="failed_authorization_timeout">Authorization timed out</string>
+
+</resources>

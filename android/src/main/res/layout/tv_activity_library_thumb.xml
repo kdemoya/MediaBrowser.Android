@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The backdrop images that are shown when navigating through the views -->
+
+    <ViewSwitcher
+        android:id="@+id/vsBackdropImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </ViewSwitcher>
+
+    <ImageView
+        android:id="@+id/ivBackdropOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".40"
+        android:contentDescription="@string/backdrop_overlay"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_gradient_left3" />
+
+    <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+    off-screen. Margin values will be defined by the user in the settings fragment -->
+    <RelativeLayout
+        android:id="@+id/rlOverscanPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mb.android.widget.DigitalClock.DigitalClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif"
+            android:textSize="26sp"/>
+
+        <LinearLayout
+            android:id="@+id/llFilterSpinnersContainer"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp">
+
+            <Spinner
+                android:id="@+id/spFilter1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:popupBackground="#80000000"
+                android:visibility="invisible"/>
+
+            <Spinner
+                android:id="@+id/spFilter2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:popupBackground="#80000000"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <com.jess.ui.TwoWayGridView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llFilterSpinnersContainer"
+            android:layout_toLeftOf="@+id/sidebar"
+            android:layout_above="@+id/footer"
+            android:scrollbars="none"
+            app:cacheColorHint="#E8E8E8"
+            app:columnWidth="79dp"
+            app:rowHeight="80dp"
+            app:numColumns="auto_fit"
+            app:numRows="3"
+            app:verticalSpacing="4dp"
+            app:horizontalSpacing="4dp"
+            app:stretchMode="none"
+            app:scrollDirectionPortrait="vertical"
+            app:scrollDirectionLandscape="horizontal"
+            app:gravity="center"/>
+
+        <fragment
+            android:name="com.mb.android.ui.tv.library.FooterFragment"
+            android:id="@+id/footer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            tools:layout="@layout/fragment_tv_footer"/>
+
+        <fragment
+            android:name="com.mb.android.ui.tv.library.SidebarFragment"
+            android:id="@+id/sidebar"
+            android:layout_height="match_parent"
+            android:layout_width="250dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            tools:layout="@layout/fragment_tv_sidebar"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pbActivityIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tvErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/channels_server_error"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif"
+        android:visibility="gone"/>
+
+</RelativeLayout>

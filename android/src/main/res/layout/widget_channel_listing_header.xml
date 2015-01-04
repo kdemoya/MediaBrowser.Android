@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:padding="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:text="Today"
+        android:textSize="22sp"
+        android:textColor="#fff"
+        android:id="@+id/tvHeaderDay"
+        android:fontFamily="sans-serif-thin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:text="01/10/14"
+        android:textSize="22sp"
+        android:textColor="#80ffffff"
+        android:id="@+id/tvHeaderDate"
+        android:fontFamily="sans-serif-thin"/>
+
+</RelativeLayout>

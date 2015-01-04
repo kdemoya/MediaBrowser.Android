@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewSwitcher
+        android:id="@+id/vsBackdropImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside" />
+
+    </ViewSwitcher>
+
+    <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+        off-screen. Margin values will be defined by the user in the settings fragment -->
+    <RelativeLayout
+        android:id="@+id/rlOverscanPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llPhotoDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:background="@drawable/rounded_underlay"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPhotoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#ffffff"
+                android:textSize="26sp"
+                android:fontFamily="sans-serif"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llControls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:background="@drawable/rounded_underlay"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivPlayPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vp_pause_selector"
+                android:focusable="true"/>
+
+            <ImageView
+                android:id="@+id/ivRewind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vp_rw_selector"
+                android:focusable="true"/>
+
+            <ImageView
+                android:id="@+id/ivFastForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vp_ff_selector"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

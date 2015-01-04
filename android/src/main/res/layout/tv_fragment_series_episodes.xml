@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlLibraryLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/ivSeasonPoster"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"/>
+
+    <com.jess.ui.TwoWayGridView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_toRightOf="@id/ivSeasonPoster"
+        android:id="@+id/gvLibrary"
+        app:cacheColorHint="#E8E8E8"
+        app:columnWidth="210dp"
+        app:rowHeight="210dp"
+        app:numColumns="auto_fit"
+        app:numRows="2"
+        app:verticalSpacing="16dp"
+        app:horizontalSpacing="16dp"
+        app:stretchMode="spacingWidthUniform"
+        app:scrollDirectionPortrait="vertical"
+        app:scrollDirectionLandscape="horizontal"/>
+
+    <ProgressBar
+        android:id="@+id/pbLibraryProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvNoContentWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_content_warning"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

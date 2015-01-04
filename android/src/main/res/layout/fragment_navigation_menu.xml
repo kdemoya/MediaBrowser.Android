@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#222">
+
+    <RelativeLayout
+        android:id="@+id/rlUserContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:background="#000000">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivUserAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/default_user"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivUserAvatar"
+            android:layout_toEndOf="@+id/ivUserAvatar"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:fontFamily="sans-serif-thin"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivUserAvatar"
+            android:layout_toEndOf="@+id/ivUserAvatar"
+            android:layout_below="@id/tvUserName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:textColor="#80ffffff"
+            android:text="@string/log_out_text"
+            android:fontFamily="sans-serif-thin"
+            android:textStyle="italic"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"/>
+
+</LinearLayout>
+

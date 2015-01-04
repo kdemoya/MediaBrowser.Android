@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Media Browser</string>
+    <string name="welcome_title">Bem vindo ao Media Browser</string>
+    <string name="welcome_paragraph">Com o Media Browser você pode, facilmente, fazer stream de vídeos, músicas e fotos para o Android e outros dispositivos através do Servidor Media Browser.</string>
+    <string name="welcome_server_download_address">Para fazer download e instalar o Servidor Media Browser visite http://mediabrowser.tv</string>
+    <string name="next_button_text">Próximo</string>
+    <string name="title_activity_main">Media Browser</string>
+    <string name="mb_connect_welcome_text_with_url">Com o &lt;a href=\'http://mediabrowser.tv/connect/\'&gt;Media Browser Connect&lt;/a&gt; você pode, facilmente, acessar seu Servidor Media Browser de qualquer lugar e compartilhar com sua família e amigos.</string>
+    <string name="mb_connect_pin_entry_url_paragraph">Para entrar no Media Browser Connect, visite http://mediabrowser.tv/pin e digite o seguinte código:</string>
+    <string name="mb_connect_sign_in_header">Entrar no Media Browser Connect</string>
+    <string name="sign_in_button_text">Entrar</string>
+    <string name="skip_button_text">Ignorar</string>
+    <string name="manual_connection_text">Conectar ao meu servidor manualmente</string>
+    <!-- Common terms -->
+    <string name="play_all_action_bar_button">Reproduzir Tudo</string>
+    <string name="shuffle_action_bar_button">Aleatório</string>
+    <string name="favorite_action_bar_button">Definir Favorito</string>
+    <string name="un_favorite_action_bar_button">Remover Favorito</string>
+    <string name="played_action_bar_button">Definir Reproduzido</string>
+    <string name="un_played_action_bar_button">Remover Reproduzido</string>
+    <string name="instant_mix_string">Mix instantâneo</string>
+    <string name="overview_header">Sinopse</string>
+    <string name="seasons_header">Temporadas</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="save">Salvar</string>
+    <string name="restart_button">Reiniciar</string>
+    <string name="warning_string">Aviso</string>
+    <string name="proceed_button">Proceder</string>
+    <string name="playlist_string">Lista de reprodução</string>
+    <string name="like_string">Curtir</string>
+    <string name="dislike_string">Não curtir</string>
+    <string name="clear_rating_string">Limpar Avaliação</string>
+    <string name="playlist_add_string">Adicionar à Lista de Reprodução</string>
+    <string name="playlist_remove_string">Remover da Lista de Reprodução</string>
+    <string name="playlist_clear_string">limpar lista de reprodução</string>
+    <!-- First-Run Wizard -->
+    <string name="first_run_introduction">Já que esta é a primeira vez que está usando o cliente MediaBrowser para Android, tentaremos configurar tudo automaticamente para você.</string>
+    <string name="first_run_single_discovered_server">Este servidor foi encontrado. Pressione para conectar ou pressione demoradamente para alterar os valores.</string>
+    <string name="first_run_multi_discovered_servers">Estes servidores foram encontrados. Selecione qual deseja conectar ou pressione demoradamente para alterar os valores.</string>
+    <string name="first_run_no_servers_found">Nenhum servidor MediaBrowser foi localizado. Clique no botão Adicionar Conexão para adicionar manualmente seu servidor.</string>
+    <string name="first_run_connection_description">Digite o endereço do servidor a que se conectará. Os formatos de endereço suportados são:</string>
+    <string name="first_run_connection_error">Não foi possível conectar ao servidor</string>
+    <string name="add_connection_dialog_title">Adicionar nova conexão</string>
+    <!-- Connection Status Messages -->
+    <string name="message_searching">Buscando servidores</string>
+    <string name="message_contacting">Contactando</string>
+    <string name="message_contacting_wan">Tentando usar endereço WAN</string>
+    <string name="message_requesting_users">Solicitando usuários</string>
+    <string name="message_authenticating">Autenticando</string>
+    <!-- Server Selection Fragment -->
+    <string name="add_connection">Adicionar conexão</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Apagar</string>
+    <string name="change_server">Alterar Servidor</string>
+    <string name="select_mb_server">Selecionar um servidor Media Browser</string>
+    <!-- Widget Server Tile -->
+    <string name="connected">conectado</string>
+    <!-- User Selection Fragment -->
+    <string name="manual_login">Login Manual</string>
+    <string name="select_mb_user">Selecionar um Usuário</string>
+    <!-- Widget User Tile -->
+    <string name="last_seen">"Visto pela última vez"</string>
+    <string name="unknown">Desconhecido</string>
+    <!-- Login dialog fragments -->
+    <string name="request_credentials_description">Por favor, digite as credenciais do login</string>
+    <string name="username_string">Nome do usuário</string>
+    <string name="pin_hint">senha</string>
+    <string name="login_dialog_description">Por favor, digite a senha para</string>
+    <string name="log_out_text">Clique para sair</string>
+    <!-- HomeScreen Activity -->
+    <string name="menu_home">Início</string>
+    <string name="settings_action_bar_button">Ajustes</string>
+    <string name="news_action_bar_button">Novidades</string>
+    <string name="movies_header">Filmes</string>
+    <string name="tv_header">TV</string>
+    <string name="music_header">Música</string>
+    <string name="games_header">Jogos</string>
+    <string name="live_tv_header">TV ao Vivo</string>
+    <string name="channels_header">Canais</string>
+    <string name="favorites_header">Favoritos</string>
+    <string name="new_header">Novo</string>
+    <string name="next_up_header">Próximo</string>
+    <string name="resume_header">Retomar</string>
+    <string name="library_header">Biblioteca</string>
+    <string name="added_on_date">Adicionado em %s</string>
+    <!-- Media Details Activity -->
+    <string name="actors_header">Atores</string>
+    <string name="play_action_bar_button">Reproduzir</string>
+    <string name="language_action_bar_button">Ajustes de Áudio e Legenda</string>
+    <string name="resume_action_bar_button">Retomar</string>
+    <string name="trailer_action_bar_button">Reproduzir Trailer</string>
+    <string name="remote_play_action_bar_button">Reprodução Remota</string>
+    <string name="popup_resume_title">Ponto para retomar disponível</string>
+    <string name="popup_play">Reproduzir do começo</string>
+    <string name="popup_resume">Retomar de %s</string>
+    <!-- Media Playback Activity -->
+    <string name="audio_stream_selection">Selecionar stream de áudio</string>
+    <string name="subtitle_stream_selection">Selecionar stream de legenda</string>
+    <string name="bitrate_selection">Selecionar taxa máxima</string>
+    <string name="toggle_media_info">Exibir informação da mídia</string>
+    <!-- Actor Bio Activity -->
+    <string name="bio_header">Bio</string>
+    <string name="media_header">Mídia</string>
+    <!-- Series Details Fragment -->
+    <string name="airs_string">Exibição</string>
+    <string name="aired_string">Exibido</string>
+    <string name="at_string">às</string>
+    <string name="links_string">links</string>
+    <!-- Music Menu -->
+    <string name="on_stage_string">No Palco</string>
+    <string name="artist_string">Artista</string>
+    <string name="albums_header">Álbuns</string>
+    <string name="songs_string">Músicas</string>
+    <string name="genres_string">Gêneros</string>
+    <!-- Rotten Tomatoes Activity -->
+    <string name="rotten_tomatoes_title">Rotten Tomatoes</string>
+    <string name="click_full_review">Toque para crítica completa</string>
+    <!-- Remote Control Dialog Fragment -->
+    <string name="remote_control_title_string">Controle Remoto</string>
+    <string name="clients_string">Clientes</string>
+    <string name="queue_string">Fila</string>
+    <string name="play_now_string">Reproduzir agora</string>
+    <string name="play_next_string">Reproduzir próximo</string>
+    <string name="play_last_string">Reproduzir último</string>
+    <string name="timeline_string">Linha do Tempo</string>
+    <string name="play_from_beginning_string">Reproduzir do início</string>
+    <string name="resume_from_string">Retomar de</string>
+    <string name="order_string">Ordenar</string>
+    <string name="play_all_string">Reproduzir tudo</string>
+    <string name="shuffle_string">Aleatório</string>
+    <string name="play_button">Reproduzir</string>
+    <string name="browse_button">Navegar</string>
+    <!-- Server Connection Dialog Fragment -->
+    <string name="name">Nome</string>
+    <string name="my_mb3_library">Minha Biblioteca MB3</string>
+    <string name="ip_address">Endereço</string>
+    <string name="internal_address">Endereço Interno</string>
+    <string name="external_address">Endereço Externo</string>
+    <string name="port">Porta</string>
+    <string name="port_value">8096</string>
+    <string name="ip_hint">192.168.0.10</string>
+    <string name="address_conflict_description">O endereço acima não está de acordo com os endereços armazenados para este servidor. Por favor, selecione o endereço que quer atualizar para o novo endereço</string>
+    <!-- Stream Selection Dialog Fragment -->
+    <string name="stream_selection_title_string">Selecione o(s) stream(s) de reprodução desejado(s)</string>
+    <string name="language_string">Idioma</string>
+    <string name="undefined_string">indefinido</string>
+    <string name="unknown_language">desconhecido</string>
+    <!-- preferences -->
+    <string name="settings_media_server">Servidor de Mídia</string>
+    <string name="settings_manage_connections">Gerenciar Conexões</string>
+    <string name="settings_manage_connections_summary">Clique para gerenciar conexões</string>
+    <string name="settings_general">Geral</string>
+    <string name="settings_homescreen">Tela inicial</string>
+    <string name="settings_default_homescreen">Tela inicial padrão</string>
+    <string name="settings_default_homescreen_summary">Esta é a aba padrão que será mostrada na tela inicial</string>
+    <string name="settings_show_collection_name">Exibir Nome da Coleção</string>
+    <string name="settings_show_collection_name_summary_on">O nome da Coleção será exibido</string>
+    <string name="settings_show_collection_name_summary_off">O nome da Coleção não será exibido</string>
+    <string name="settings_show_collection_item_counts">Exibir Contagem dos Itens</string>
+    <string name="settings_show_collection_item_counts_summary_on">A contagem dos itens da Coleção será exibida</string>
+    <string name="settings_show_collection_item_counts_summary_off">A contagem dos itens da Coleção não será exibida</string>
+    <string name="settings_library">Biblioteca</string>
+    <string name="settings_library_summary">Configure a informação que será exibida nas visualizações da biblioteca</string>
+    <string name="settings_prefer_posters">Preferir Posters</string>
+    <string name="settings_prefer_posters_summary_off">Os ícones serão exibidas nas visualizações da biblioteca</string>
+    <string name="settings_prefer_posters_summary_on">Os posters serão exibidos nas visualizações da biblioteca</string>
+    <string name="settings_theme_songs">Ativar Músicas-tema</string>
+    <string name="settings_theme_songs_summary_off">As Músicas-tema não serão reproduzidas</string>
+    <string name="settings_theme_songs_summary_on">As Músicas-tema serão reproduzidas</string>
+    <string name="settings_playback">Reprodução</string>
+    <string name="settings_playback_summary">Selecione a taxa de bits usada em cada cenário. Mais alta é melhor. (A performance depende das especificações do servidor e da velocidade da conexão)</string>
+    <string name="settings_hls">Suporte ao HLS</string>
+    <string name="settings_hls_summary_off">HLS desativado</string>
+    <string name="settings_hls_summary_on">HLS ativado</string>
+    <string name="settings_lan_title">LAN/WIFI</string>
+    <string name="settings_lan_summary">Definir a taxa de bits usada quando reproduzir na LAN ou Wifi.</string>
+    <string name="settings_lan_dialog">Taxa de bits para Reprodução local</string>
+    <string name="settings_cellular_title">Celular</string>
+    <string name="settings_cellular_summary">Definir a taxa de bits usada quando reproduzir em 3G/4G.</string>
+    <string name="settings_cellular_dialog">Taxa de bits da Reprodução no Celular</string>
+    <string name="settings_chromecast_title">Chromecast</string>
+    <string name="settings_chromecast_summary">Defina a taxa de vídeo usada ao enviar para o Chromecast.</string>
+    <string name="settings_chromecast_dialog">Taxa de Reprodução do Chromecast</string>
+    <string name="settings_external_player">Reprodutor Externo</string>
+    <string name="settings_external_player_summary_on">O reprodutor externo será usado</string>
+    <string name="settings_external_player_summary_off">Usar reprodutor interno</string>
+    <string name="settings_info">Info</string>
+    <string name="settings_about">Sobre</string>
+    <string name="application_profile_mobile">Móvel</string>
+    <string name="application_profile_television">Televisão</string>
+    <string name="settings_subtitle_header">Tamanho da Legenda</string>
+    <string name="settings_subtitle_description">Defina o tamanho do texto quando as legendas são exibidas. Não tem efeito em legendas gravadas no vídeo</string>
+    <string name="settings_subtitle_largest">Maior</string>
+    <string name="settings_subtitle_large">Grande</string>
+    <string name="settings_subtitle_normal">Normal</string>
+    <string name="settings_subtitle_small">Pequeno</string>
+    <string name="settings_subtitle_smallest">Menor</string>
+    <string name="settings_server_image_enhancers">Intensificadores de Imagem</string>
+    <string name="settings_image_enhancers_summary_on">Os intensificadores de imagem do servidor serão usados</string>
+    <string name="settings_image_enhancers_summary_off">Os intensificadores de imagem do servidor não serão usados</string>
+    <!-- Live TV -->
+    <string name="ltv_channels">Canais</string>
+    <string name="ltv_recordings">Gravações</string>
+    <string name="ltv_scheduled_recordings">Agendada</string>
+    <string name="ltv_scheduled_series">Série</string>
+    <string name="ltv_record_series">Gravar série</string>
+    <string name="ltv_days">Dias</string>
+    <string name="ltv_frequency">Frenquência</string>
+    <string name="ltv_record_only_new">Gravar apenas novos episódios</string>
+    <string name="ltv_record_anytime">Gravar programa a qualquer hora</string>
+    <string name="ltv_record_all_channels">Gravar programa em todos os canais</string>
+    <string name="ltv_pre_post_padding">Pre/Post Padding</string>
+    <string name="ltv_pre_padding_required">É necessário pre-padding</string>
+    <string name="ltv_pre_padding_minutes">Minutos de pre-padding</string>
+    <string name="ltv_post_padding_required">É necessário post-padding</string>
+    <string name="ltv_post_padding_minutes">Minutos de post-padding</string>
+    <string name="ltv_record_button">Gravar Programa</string>
+    <string name="ltv_delete_recording">Apagar Gravação</string>
+    <string name="ltv_update_recording_button">Atualizar Gravação</string>
+    <string name="ltv_cancel_recording">Cancelar Gravação</string>
+    <string name="ltv_cancel_series">Cancelar Série</string>
+    <string name="ltv_watch_now">Assistir agora</string>
+    <!-- Channels -->
+    <string name="channels_no_content_warning">Não foi recebido nenhum conteúdo</string>
+    <string name="channels_server_error">Erro ao comunicar com o servidor</string>
+    <string name="no_scheduled_recordings">Não existem gravações agendadas</string>
+    <string name="no_listings_available">Não existem listas de canais disponíveis</string>
+    <string name="director_">Diretor:</string>
+    <string name="writer_">"Escritor: "</string>
+    <string name="server_tile_icon">Ícone do Mosaico do Servidor</string>
+    <string name="no_available_mb_server_warning">Nenhuma biblioteca do MediaBrowser foi encontrada. Clique no ícone para adicionar uma nova conexão.</string>
+    <string name="external_player_warning">Ao reproduzir através de um reprodutor externo, a reprodução pelo celular falhará. A mídia é diretamente transmitida ao invés de transcodificada. Você perderá também a posição da reprodução.\n\nTem certeza que quer ativar o suporte ao reprodutor externo?</string>
+    <string name="no_content_warning">Nenhum conteúdo disponível. Adicione bibliotecas de mídia através do Painel do Servidor MediaBrowser.</string>
+    <string name="no_new_items_warning">Nenhum item recentemente adicionado.</string>
+    <string name="no_favorite_items_warning">Nenhum item marcado como favorito.</string>
+    <string name="no_next_up_items_warning">Nenhum episódio por estrear. Comece assistindo TV!</string>
+    <string name="no_resumable_items_warning">Nenhum item para retomar.</string>
+    <string name="primary_image">Imagem principal</string>
+    <string name="star_rating_image">Classificação por estrelas</string>
+    <string name="backdrop_image">Imagem de fundo</string>
+    <string name="backdrop_overlay">Sobreposição da imagem de fundo</string>
+    <string name="subtitle_stream">Stream da Legenda</string>
+    <string name="audio_stream">Stream de Áudio</string>
+    <string name="missing_overlay">AUSENTE</string>
+    <string name="un_aired_overlay">NÃO EXIBIDO</string>
+    <string name="none">Nenhum</string>
+    <string name="media_route_menu_title">Chromecast</string>
+    <!--
+    <string name="back_button">Back</string>-->
+    <!--
+    <string name="forward_button">Forward</string>-->
+    <!--
+    <string name="stop_button">Stop</string>-->
+    <string name="restart_warning">A aplicação necessita reiniciar para fazer as alterações. Pressione reiniciar para continuar.</string>
+    <string name="live">Ao vivo</string>
+    <string name="mirror_content">Espelhar conteúdo para este dispositivo</string>
+    <!-- Title of the Error Dialog -->
+    <string name="error">Erro</string>
+    <!-- Shown in VideoCastController Activity -->
+    <string name="casting_to_device">Transmitindo para %1$s</string>
+    <string name="loading">Carregando&#8230;</string>
+    <!-- Used in Router Controller Dialog -->
+    <string name="no_media_info">Não existe informação de mídia disponíbel</string>
+    <!-- Session Recovery Dialog message -->
+    <string name="session_reconnection_attempt">Tentando recuperar uma sessão&#8230; prévia</string>
+    <!-- onApplicationConnectionFailed() errors -->
+    <string name="failed_to_launch_app">Falha ao iniciar a aplicação</string>
+    <string name="failed_app_launch_timeout">A solicitação para iniciar a aplicação expirou!</string>
+    <string name="failed_to_find_app">A aplicação que está tentando iniciar não está disponível em seu dispositivo Chromecast</string>
+    <!-- Error messages for the play.pause in mini player -->
+    <string name="failed_to_play">Falha ao iniciar a reprodução da mídia</string>
+    <string name="failed_to_stop">Falha ao parar a reprodução da mídia</string>
+    <string name="failed_to_pause">Falha ao pausar a reprodução da mídia</string>
+    <string name="failed_unknown">Ocorreu um erro desconhecido</string>
+    <!-- Failures -->
+    <string name="failed_to_connect">Não pode conectar com o servidor</string>
+    <string name="failed_setting_volume">Falhar ao configurar o volume</string>
+    <string name="failed_no_connection">Não existe nenhuma conexão com o dispositivo a transmitir</string>
+    <string name="failed_no_connection_short">Sem conexão</string>
+    <string name="failed_no_connection_trans">A conexão com o dispositivo a transmitir foi perdida. A aplicação está tentando restabelecer a conexão. Por favor, espere alguns segundos e tente novamente.</string>
+    <string name="failed_perform_action">Falha ao executar a ação</string>
+    <string name="failed_status_request">Falha ao sincronizar com o dispositivo a transmitir</string>
+    <string name="failed_load">Falha ao carregar mídia no dispositivo a transmitir</string>
+    <string name="failed_seek">Falha para buscar nova posição no dispositivo a transmitir</string>
+    <string name="failed_receiver_player_error">O reprodutor que está recebendo a mídia encontrou um erro no servidor</string>
+    <string name="failed_authorization_timeout">A autorização expirou</string>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/intro_watermark"/>
+
+    <ImageView
+        android:id="@+id/ivConnectLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:maxHeight="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/mc_connect_logo"/>
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="23sp"
+        android:text="@string/mb_connect_sign_in_header"
+        android:textColor="#ffffff"
+        android:layout_below="@id/ivConnectLogo" />
+
+    <TextView
+        android:id="@+id/tvParagraph1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="20sp"
+        android:text="@string/mb_connect_pin_entry_url_paragraph"
+        android:textColor="#80ffffff"
+        android:layout_below="@id/tvHeader"
+        android:autoLink="web"/>
+
+    <TextView
+        android:id="@+id/tvPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="50sp"
+        android:textColor="#00b4ff"
+        android:layout_below="@id/tvParagraph1"
+        android:background="@drawable/rounded_underlay"/>
+
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvParagraph2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/skip_button_text"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tvParagraph2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="10sp"
+        android:textColor="#ffffff"
+        android:text="@string/manual_connection_text"
+        android:autoLink="web"/>
+
+</RelativeLayout>

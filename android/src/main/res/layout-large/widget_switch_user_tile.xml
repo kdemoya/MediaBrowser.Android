@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llUserTile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/grid_item_outer_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:background="#30bbbbbb"
+        android:padding="@dimen/grid_item_inner_padding"
+        android:orientation="horizontal">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivUserTileImage"
+            android:layout_width="65dip"
+            android:layout_height="65dip"
+            android:layout_marginRight="16dip"
+            android:layout_marginEnd="16dip"
+            android:contentDescription="@string/primary_image"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvUserTileName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ivUserTileImage"
+            android:layout_toEndOf="@+id/ivUserTileImage"
+            android:gravity="center_vertical"
+            android:textSize="22sp"
+            android:textColor="#ffffff"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:id="@+id/tvAlsoHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="Also here"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_underlay_sexy_blue"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

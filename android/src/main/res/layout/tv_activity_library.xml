@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The backdrop images that are shown when navigating through the views -->
+
+    <ViewSwitcher
+        android:id="@+id/vsBackdropImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </ViewSwitcher>
+
+    <ImageView
+        android:id="@+id/ivBackdropOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/backdrop_overlay"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_gradient_left3" />
+
+    <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+    off-screen. Margin values will be defined by the user in the settings fragment -->
+    <RelativeLayout
+        android:id="@+id/rlOverscanPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mb.android.widget.DigitalClock.DigitalClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif"
+            android:textSize="26sp"/>
+
+        <FrameLayout
+            android:id="@+id/flMainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pbActivityIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tvErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/channels_server_error"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif"
+        android:visibility="gone"/>
+
+</RelativeLayout>

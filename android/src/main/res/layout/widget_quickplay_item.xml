@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/grid_item_outer_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivEpisodeImage"
+            android:layout_width="89dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/grid_item_inner_padding"
+            android:scaleType="centerInside"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvActionText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/ivEpisodeImage"
+                android:layout_marginLeft="@dimen/grid_item_inner_padding"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/grid_item_primary_text"
+                android:visibility="gone"
+                android:textColor="#ffffff"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/tvEpisodeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivEpisodeImage"
+                android:layout_marginTop="@dimen/grid_item_inner_padding"
+                android:layout_marginLeft="@dimen/grid_item_inner_padding"
+                android:layout_marginRight="@dimen/grid_item_inner_padding"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/grid_item_primary_text"
+                android:textColor="#ffffff"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/tvAddedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivEpisodeImage"
+                android:layout_below="@+id/tvEpisodeTitle"
+                android:layout_marginLeft="@dimen/grid_item_inner_padding"
+                android:layout_marginRight="@dimen/grid_item_inner_padding"
+                android:textSize="@dimen/grid_item_secondary_text"
+                android:fontFamily="sans-serif-thin"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

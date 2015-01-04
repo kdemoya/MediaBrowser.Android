@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- The backdrop images that are shown when navigating through the views -->
+
+        <ViewSwitcher
+            android:id="@+id/vsBackdropImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@anim/fade_in"
+            android:outAnimation="@anim/fade_out">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivBackdropImage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivBackdropImage2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </ViewSwitcher>
+
+        <ImageView
+            android:id="@+id/ivBackdropOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".90"
+            android:contentDescription="@string/backdrop_overlay"
+            android:scaleType="fitXY"
+            android:src="@drawable/tv_gradient_left3" />
+
+        <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+        off-screen. Margin values will be defined by the user in the settings fragment -->
+        <RelativeLayout
+            android:id="@+id/rlOverscanPadding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.mb.android.widget.DigitalClock.DigitalClock
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif"
+                android:textSize="26sp"/>
+
+            <ImageButton
+                android:id="@+id/ibStreamMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/ibOptionsMenu"
+                android:visibility="gone"
+                android:src="@drawable/stream_button"/>
+
+            <ImageButton
+                android:id="@+id/ibOptionsMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/clock"
+                android:layout_alignBottom="@+id/clock"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/clock"
+                android:src="@drawable/vp_menu_selector"
+                android:background="@null"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/ivLogoImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:maxWidth="200dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llTitleContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="28sp"
+                        android:id="@+id/tvPrimaryMediaTitle"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="65dp"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlPrimaryImageContainer"
+                        android:layout_width="220dp"
+                        android:layout_height="330dp">
+
+                        <com.android.volley.toolbox.NetworkImageView
+                            android:id="@+id/ivPosterImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="40dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"/>
+
+                        <TextView
+                            android:id="@+id/tvWatchedOverlay"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignRight="@+id/ivPosterImage"
+                            android:layout_alignTop="@+id/ivPosterImage"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/watched_circle"
+                            android:gravity="center"
+                            android:text="\u2714"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:visibility="invisible" />
+
+                        <ProgressBar
+                            android:id="@+id/pbPlaybackProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/progress_bar_height"
+                            android:layout_margin="2dp"
+                            android:layout_alignBottom="@+id/ivPosterImage"
+                            android:layout_alignLeft="@+id/ivPosterImage"
+                            android:layout_alignRight="@+id/ivPosterImage"
+                            android:layout_alignStart="@+id/ivPosterImage"
+                            android:layout_alignEnd="@+id/ivPosterImage"
+                            android:progressDrawable="@drawable/greenprogress"
+                            android:visibility="invisible"
+                            style="?android:attr/progressBarStyleHorizontal" />
+
+                    </RelativeLayout>
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/ivDiscImage"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_alignBottom="@+id/rlPrimaryImageContainer"
+                        android:layout_marginLeft="120dp"
+                        android:scaleType="centerInside"
+                        android:visibility="invisible"/>
+
+                    <LinearLayout
+                        android:id="@+id/llOverviewTabContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/rlPrimaryImageContainer"
+                        android:layout_alignTop="@+id/rlPrimaryImageContainer"
+                        android:layout_alignBottom="@+id/rlPrimaryImageContainer"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textSize="28sp"
+                            android:id="@+id/tvMediaTitle"
+                            android:fontFamily="sans-serif"
+                            android:textColor="#ffffff"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:id="@+id/tvSeriesTitle"
+                            android:fontFamily="sans-serif"
+                            android:textColor="#80ffffff"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:id="@+id/tvSeasonEpisodeNumbers"
+                            android:fontFamily="sans-serif"
+                            android:textColor="#80ffffff"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/llRatingContainer">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp"
+                                    android:text="Year"
+                                    android:fontFamily="sans-serif-condensed"/>
+
+                                <TextView
+                                    android:id="@+id/tvYearValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#00b4ff"
+                                    android:textSize="18sp"
+                                    android:fontFamily="sans-serif"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp"
+                                    android:text="Runtime"
+                                    android:fontFamily="sans-serif-condensed"/>
+
+                                <TextView
+                                    android:id="@+id/tvRuntimeValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#00b4ff"
+                                    android:textSize="18sp"
+                                    android:fontFamily="sans-serif"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="30dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp"
+                                    android:text="Rating"
+                                    android:fontFamily="sans-serif-condensed"/>
+
+                                <TextView
+                                    android:id="@+id/tvRatingValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#00b4ff"
+                                    android:textSize="18sp"
+                                    android:fontFamily="sans-serif"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14sp"
+                                    android:text="Genres"
+                                    android:fontFamily="sans-serif-condensed"/>
+
+                                <TextView
+                                    android:id="@+id/tvGenresValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#00b4ff"
+                                    android:textSize="18sp"
+                                    android:fontFamily="sans-serif"/>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="23dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/ivStarImage"
+                                android:scaleType="centerInside"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                android:layout_marginRight="3dp"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/ivCriticFreshRottenImage"
+                                android:scaleType="centerInside"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/tvRtRating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:textSize="16sp"
+                                android:textColor="#fff"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/tvMetaScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:textSize="16sp"
+                                android:textColor="#fff"
+                                android:gravity="center_vertical"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tvSeriesGenres"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginBottom="15dp"-->
+                        <!--android:fontFamily="sans-serif"-->
+                        <!--android:textColor="#00b4ff"-->
+                        <!--android:scrollbars="vertical"-->
+                        <!--android:textSize="16sp"/>-->
+
+                        <TextView
+                            android:id="@+id/tvMediaOverview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="20dp"
+                            android:scrollbars="vertical"
+                            android:fontFamily="sans-serif"
+                            android:textColor="#B0B0B0"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:id="@+id/tvSeriesInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:textColor="#85ffffff"
+                            android:scrollbars="vertical"
+                            android:textSize="18sp"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <com.jess.ui.TwoWayGridView
+                        android:id="@+id/gridview"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/rlPrimaryImageContainer"
+                        android:layout_marginLeft="35dp"
+                        android:layout_alignTop="@+id/rlPrimaryImageContainer"
+                        android:layout_alignBottom="@+id/rlPrimaryImageContainer"
+                        app:cacheColorHint="#E8E8E8"
+                        app:columnWidth="240dp"
+                        app:rowHeight="240dp"
+                        app:numColumns="auto_fit"
+                        app:numRows="1"
+                        app:verticalSpacing="8dp"
+                        app:horizontalSpacing="8dp"
+                        app:stretchMode="spacingWidthUniform"
+                        app:scrollDirectionPortrait="vertical"
+                        app:scrollDirectionLandscape="horizontal"
+                        android:visibility="gone"
+                        android:nextFocusDown="@+id/gvSectionsGrid"
+                        android:nextFocusLeft="@+id/gridview"
+                        android:nextFocusRight="@+id/gridview"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pbActivityIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="#80000000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:orientation="horizontal"
+                android:background="#85ffffff"/>
+
+            <com.jess.ui.TwoWayGridView
+                android:id="@+id/gvSectionsGrid"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:paddingTop="1dp"
+                android:paddingLeft="45dp"
+                android:paddingRight="45dp"
+                android:nextFocusLeft="@+id/gvSectionsGrid"
+                android:nextFocusRight="@+id/gvSectionsGrid"
+                app:cacheColorHint="#E8E8E8"
+                app:columnWidth="160dp"
+                app:rowHeight="43dp"
+                app:numColumns="auto_fit"
+                app:numRows="1"
+                app:verticalSpacing="1dp"
+                app:horizontalSpacing="1dp"
+                app:stretchMode="none"
+                app:scrollDirectionPortrait="vertical"
+                app:scrollDirectionLandscape="horizontal"
+                app:gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:orientation="horizontal"
+                android:background="#85ffffff"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>

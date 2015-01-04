@@ -1,0 +1,240 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/ivMusicScreenSaver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/rlControlUnderlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/audio_player_y_margin"
+        android:layout_marginRight="@dimen/audio_player_y_margin"
+        android:layout_marginTop="@dimen/audio_player_x_margin"
+        android:layout_marginBottom="@dimen/audio_player_x_margin"
+        android:background="#80000000">
+
+        <RelativeLayout
+            android:id="@+id/rlImageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivPlaybackMediaImage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/ivPlayPause"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ap_pause" />
+
+            <SeekBar
+                android:id="@+id/sbPlaybackProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ivPlaybackMediaImage"
+                android:layout_alignRight="@+id/ivPlaybackMediaImage"
+                android:layout_above="@+id/tvRuntime"/>
+
+            <TextView
+                android:id="@+id/tvRuntime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/rlImageContainer">
+
+            <TextView
+                android:id="@+id/tvPlaybackPrimaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:maxLines="2"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/audio_player_song_title"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/audio_player_album_artist_header"
+                android:textColor="#ffffff"
+                android:text="Album"/>
+
+            <TextView
+                android:id="@+id/tvPlaybackSecondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/audio_player_album_artist_title"
+                android:textColor="#00b4ff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/audio_player_album_artist_header"
+                android:textColor="#ffffff"
+                android:text="Artist"/>
+
+            <TextView
+                android:id="@+id/tvPlaybackActivityTertiearyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/audio_player_album_artist_title"
+                android:textColor="#00b4ff"/>
+
+            <LinearLayout
+                android:id="@+id/llLowerPane"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llTransportControls"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/ivShuffle"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_shuffle_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+
+                        <ImageButton
+                            android:id="@+id/ivPrevious"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_previous_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+
+                        <ImageButton
+                            android:id="@+id/ivNext"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_next_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+
+                        <ImageButton
+                            android:id="@+id/ivRepeat"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_repeat_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <!--<android.support.v7.app.MediaRouteButton-->
+                        <!--android:id="@+id/media_route_button"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:mediaRouteTypes="user"-->
+                        <!--android:visibility="gone" />-->
+
+                        <ImageButton
+                            android:id="@+id/ivAudioMute"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_mute_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+
+                        <ImageButton
+                            android:id="@+id/ivAudioDown"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_vol_down_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+
+                        <ImageButton
+                            android:id="@+id/ivAudioUp"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_vol_up_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+
+                        <ImageButton
+                            android:id="@+id/ivPlaylist"
+                            android:layout_weight="1"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ap_playlist_selector"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:background="@null" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The backdrop images that are shown when navigating through the views -->
+
+    <ViewSwitcher
+        android:id="@+id/vsBackdropImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivBackdropImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+    </ViewSwitcher>
+
+    <ImageView
+        android:id="@+id/ivBackdropOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".40"
+        android:contentDescription="@string/backdrop_overlay"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_gradient_left3" />
+
+    <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+    off-screen. Margin values will be defined by the user in the settings fragment -->
+    <RelativeLayout
+        android:id="@+id/rlOverscanPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mb.android.widget.DigitalClock.DigitalClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:fontFamily="sans-serif"
+            android:textSize="26sp"/>
+
+        <ImageButton
+            android:id="@+id/ibOptionsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/clock"
+            android:layout_alignBottom="@+id/clock"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/clock"
+            android:nextFocusDown="@+id/gridview"
+            android:src="@drawable/vp_menu_selector"
+            android:background="@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/clock"
+            android:layout_above="@+id/gridview"
+            android:orientation="horizontal">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivActorImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginEnd="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMediaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="28sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#ffffff"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"/>
+
+                <TextView
+                    android:id="@+id/tvDateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="16sp"
+                    android:textColor="#D8D8D8"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"/>
+
+                <TextView
+                    android:id="@+id/tvBirthPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="16sp"
+                    android:textColor="#D8D8D8"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"/>
+
+                <TextView
+                    android:id="@+id/tvDateOfDeath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="16sp"
+                    android:textColor="#D8D8D8"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"/>
+
+                <ScrollView
+                    android:id="@+id/svOverviewScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:scrollbars="none"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false">
+
+                    <TextView
+                        android:id="@+id/tvActorBio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:textColor="#ffffff"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textSize="20sp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"/>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.jess.ui.TwoWayGridView
+            android:id="@+id/gridview"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
+            android:nextFocusUp="@+id/ibOptionsMenu"
+            app:cacheColorHint="#E8E8E8"
+            app:columnWidth="160dp"
+            app:rowHeight="160dp"
+            app:numColumns="auto_fit"
+            app:numRows="1"
+            app:verticalSpacing="1dp"
+            app:horizontalSpacing="1dp"
+            app:stretchMode="spacingWidth"
+            app:scrollDirectionPortrait="vertical"
+            app:scrollDirectionLandscape="horizontal"
+            app:gravity="center"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pbActivityIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

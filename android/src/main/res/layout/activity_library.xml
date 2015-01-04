@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/miniController1">
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/sort_filter_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- The navigation drawer -->
+            <ListView
+                android:id="@+id/right_drawer"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="#111"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp" />
+
+        </android.support.v4.widget.DrawerLayout>
+
+        <!-- The navigation drawer -->
+        <fragment
+            android:name="com.mb.android.fragments.NavigationMenuFragment"
+            android:id="@+id/left_drawer"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            tools:layout="@layout/fragment_navigation_menu" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <com.mb.android.playbackmediator.widgets.MiniController
+        android:id="@+id/miniController1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow7"
+        android:visibility="gone" />
+
+</RelativeLayout>

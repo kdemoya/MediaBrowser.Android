@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="pref_media_library"
+        android:title="@string/settings_media_server">
+
+        <Preference
+            android:key="pref_server_name"
+            android:persistent="false"
+            android:summary="@string/settings_manage_connections_summary"
+            android:title="@string/settings_manage_connections">
+            <intent
+                android:action="android.intent.VIEW"
+                android:targetClass="com.mb.android.ui.main.ConnectionActivity"
+                android:targetPackage="com.mb.android">
+                <extra
+                    android:name="show_servers"
+                    android:value="true"/>
+            </intent>
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_general_settings"
+        android:title="@string/settings_general">
+
+        <ListPreference
+            android:key="pref_application_profile"
+            android:title="Application Profile"
+            android:summary="Specify the layout used."
+            android:dialogTitle="Layout"
+            android:entries="@array/pref_application_profile_values"
+            android:entryValues="@array/pref_application_profile_values"
+            android:defaultValue="Mobile" />
+
+        <!--<com.mb.android.widget.customswitchpreference.CustomSwitchPreference-->
+        <!--android:key="pref_enable_backdrops"-->
+        <!--android:title="Enable Backdrops"-->
+        <!--android:summaryOff="Backdrops are not shown in various views"-->
+        <!--android:summaryOn="Backdrops are shown in various views"-->
+        <!--android:defaultValue="false" />-->
+
+        <Preference
+            android:key="pref_adjust_overscan"
+            android:persistent="false"
+            android:summary="Adjust margins to properly align content with screen edges"
+            android:title="Adjust Overscan">
+            <intent
+                android:action="android.intent.VIEW"
+                android:targetClass="com.mb.android.ui.OverscanActivity"
+                android:targetPackage="com.mb.android">
+            </intent>
+        </Preference>
+
+        <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+            android:defaultValue="true"
+            android:key="pref_enable_image_enhancers"
+            android:summaryOff="@string/settings_image_enhancers_summary_off"
+            android:summaryOn="@string/settings_image_enhancers_summary_on"
+            android:title="@string/settings_server_image_enhancers" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_homescreen_settings"
+        android:title="@string/settings_homescreen">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/settings_default_homescreen"
+            android:entries="@array/pref_homescreen_tab_names"
+            android:entryValues="@array/pref_homescreen_tab_values"
+            android:key="pref_home_default_tab"
+            android:summary="@string/settings_default_homescreen_summary"
+            android:title="@string/settings_default_homescreen" />
+
+        <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+            android:defaultValue="true"
+            android:key="pref_show_name"
+            android:summaryOff="@string/settings_show_collection_name_summary_off"
+            android:summaryOn="@string/settings_show_collection_name_summary_on"
+            android:title="@string/settings_show_collection_name" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_library_settings"
+        android:summary="@string/settings_library_summary"
+        android:title="@string/settings_library">
+
+        <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_prefer_posters"
+            android:summaryOff="@string/settings_prefer_posters_summary_off"
+            android:summaryOn="@string/settings_prefer_posters_summary_on"
+            android:title="@string/settings_prefer_posters" />
+
+        <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+            android:defaultValue="true"
+            android:key="pref_play_theme"
+            android:summaryOff="@string/settings_theme_songs_summary_off"
+            android:summaryOn="@string/settings_theme_songs_summary_on"
+            android:title="@string/settings_theme_songs" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_playback_settings"
+        android:summary="@string/settings_playback_summary"
+        android:title="@string/settings_playback">
+
+        <PreferenceScreen
+            android:key="streaming_options"
+            android:title="Streaming Options">
+
+            <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+                android:defaultValue="true"
+                android:key="pref_enable_hls"
+                android:summaryOff="@string/settings_hls_summary_off"
+                android:summaryOn="@string/settings_hls_summary_on"
+                android:title="@string/settings_hls" />
+
+            <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+                android:defaultValue="true"
+                android:key="pref_h264_strict"
+                android:summaryOff="support all profiles for H264"
+                android:summaryOn="only support baseline profile for H264"
+                android:title="H264 strict mode" />
+
+            <!--<com.mb.android.widget.customswitchpreference.CustomSwitchPreference-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="pref_enable_dd"-->
+            <!--android:summaryOff="Device does not support Dolby Digital"-->
+            <!--android:summaryOn="Device supports Dolby Digital"-->
+            <!--android:title="Dolby Digital" />-->
+
+            <!--<com.mb.android.widget.customswitchpreference.CustomSwitchPreference-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="pref_enable_dts"-->
+            <!--android:summaryOff="Device does not support DTS Audio"-->
+            <!--android:summaryOn="Device supports DTS Audio"-->
+            <!--android:title="DTS Audio" />-->
+
+        </PreferenceScreen>
+
+        <ListPreference
+            android:defaultValue="5872000"
+            android:dialogTitle="@string/settings_lan_dialog"
+            android:entries="@array/pref_bitrate_entries"
+            android:entryValues="@array/pref_bitrate_values"
+            android:key="pref_local_bitrate"
+            android:summary="@string/settings_lan_summary"
+            android:title="@string/settings_lan_title" />
+
+        <ListPreference
+            android:defaultValue="722000"
+            android:dialogTitle="@string/settings_cellular_dialog"
+            android:entries="@array/pref_bitrate_entries"
+            android:entryValues="@array/pref_bitrate_values"
+            android:key="pref_cellular_bitrate"
+            android:summary="@string/settings_cellular_summary"
+            android:title="@string/settings_cellular_title" />
+
+        <ListPreference
+            android:defaultValue="5872000"
+            android:dialogTitle="@string/settings_chromecast_dialog"
+            android:entries="@array/pref_bitrate_entries"
+            android:entryValues="@array/pref_bitrate_values"
+            android:key="pref_chromecast_bitrate"
+            android:summary="@string/settings_chromecast_summary"
+            android:title="@string/settings_chromecast_title" />
+
+        <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_enable_external_player"
+            android:summaryOff="@string/settings_external_player_summary_off"
+            android:summaryOn="@string/settings_external_player_summary_on"
+            android:title="@string/settings_external_player" />
+
+        <ListPreference
+            android:defaultValue="18"
+            android:dialogTitle="@string/settings_subtitle_header"
+            android:entries="@array/pref_subtitle_size_entries"
+            android:entryValues="@array/pref_subtitle_size_values"
+            android:key="pref_subtitle_size"
+            android:summary="@string/settings_subtitle_description"
+            android:title="@string/settings_subtitle_header" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_info"
+        android:title="@string/settings_info">
+
+        <Preference
+            android:key="pref_about"
+            android:persistent="false"
+            android:title="@string/settings_about">
+            <intent
+                android:action="android.intent.VIEW"
+                android:targetClass="com.mb.android.ui.main.AboutActivity"
+                android:targetPackage="com.mb.android" />
+        </Preference>
+
+        <com.mb.android.widget.customswitchpreference.CustomSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_debug_logging_enabled"
+            android:summaryOff="Debug logging is not enabled"
+            android:summaryOn="Debug logging enabled. Log files will be significantly larger."
+            android:title="Debug Logging" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

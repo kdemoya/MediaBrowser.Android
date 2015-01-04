@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- All other visible content should be inside this view element -->
+    <RelativeLayout
+        android:id="@+id/rlOverscanPadding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/intro_watermark"/>
+
+        <ImageView
+            android:id="@+id/ivMediaBrowserLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:maxHeight="50dp"
+            android:src="@drawable/mb_logo"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/ivMediaBrowserLogo"
+            android:layout_above="@+id/btnConnect"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivMediaBrowserLogo"
+                android:background="#000000">
+
+                <TextView
+                    android:id="@+id/tvHeaderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/header_padding"
+                    android:layout_toLeftOf="@+id/llAddConnection"
+                    android:text="@string/select_mb_server"
+                    android:textSize="22sp"
+                    android:textColor="#ffffff"
+                    android:fontFamily="sans-serif-thin"/>
+
+                <LinearLayout
+                    android:id="@+id/llAddConnection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHeaderText"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ivIncognito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivChangeServer"
+                        android:layout_toStartOf="@+id/ivChangeServer"
+                        android:text="Manual Login"
+                        android:lines="2"/>
+
+                    <Button
+                        android:id="@+id/ivChangeServer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:text="Change Server"
+                        android:lines="2"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <GridView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/gvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="@integer/server_columns"
+                android:orientation="vertical"
+                tools:listitem="@layout/widget_server_tile"
+                android:background="#000000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Sign in with MB Connect"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

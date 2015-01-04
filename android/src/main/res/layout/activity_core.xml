@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--
+        The surface that video playback will be rendered on for almost all scenarios including
+            Primary Playback
+            Theme Videos
+            Live TV
+        -->
+
+        <com.mb.android.player.MediaPlayerSurfaceView
+            android:id="@+id/svPrimaryPlaybackSurface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- The backdrop images that are shown when navigating through the views -->
+
+        <ViewSwitcher
+            android:id="@+id/vsBackdropImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@anim/fade_in"
+            android:outAnimation="@anim/fade_out">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivBackdropImage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivBackdropImage2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </ViewSwitcher>
+
+        <ImageView
+            android:id="@+id/ivBackdropOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".90"
+            android:contentDescription="@string/backdrop_overlay"
+            android:scaleType="fitXY"
+            android:src="@drawable/tv_gradient_left3" />
+
+        <!-- This layout is used purely to assign overscan padding and ensure that controls are not rendered
+        off-screen. Margin values will be defined by the user in the settings fragment -->
+        <RelativeLayout
+            android:id="@+id/rlOverscanPadding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- All the various views will be rendered inside this frame -->
+            <FrameLayout
+                android:id="@+id/flPrimaryContentFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+            <!-- An overlay that will be shown above all fragments that allows the user to access the settings
+            or log in as a different user. Also displays the current time -->
+            <LinearLayout
+                android:id="@+id/llSettingsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|top"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/ivSettingsImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/button_selector"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/settings" />
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/ivAvatarImage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:background="@drawable/button_selector" />
+
+                <!-- The clock -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvTimeHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:fontFamily="sans-serif"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textSize="24sp"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tvTimeMinutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/tvTimeModifier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="24sp"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llDrawerMenu"
+        android:orientation="vertical"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:gravity="right"
+        android:background="#000000"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:src="@drawable/mb_logo"
+            android:layout_margin="10dp"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Poster View"-->
+            <!--android:textColor="#ffff"-->
+            <!--android:textSize="18sp"-->
+            <!--android:fontFamily="sans-serif-condensed"/>-->
+
+        <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Show Details"-->
+            <!--android:textSize="24sp"-->
+            <!--android:textColor="#ff6600"-->
+            <!--android:fontFamily="sans-serif-condensed"/>-->
+
+        <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="Collapse into Boxsets"-->
+            <!--android:textColor="#ffff"-->
+            <!--android:fontFamily="sans-serif-condensed"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvAddManageUsers"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Manage User Session"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#ffff"-->
+            <!--android:fontFamily="sans-serif-condensed"/>-->
+
+        <!-- This menu will be visible in all views except playback and will allow users to jump to any
+            root location in their library -->
+        <ListView
+            android:id="@+id/lvMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:listSelector="@android:color/transparent"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

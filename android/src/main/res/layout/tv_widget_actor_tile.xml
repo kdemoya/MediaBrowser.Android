@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="142dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/text_gridview_selector"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivActorImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llActorInfo"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:id="@+id/llActorInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ivActorImage"
+            android:layout_alignRight="@+id/ivActorImage"
+            android:layout_alignStart="@+id/ivActorImage"
+            android:layout_alignEnd="@+id/ivActorImage"
+            android:layout_alignParentBottom="true"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvActorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans_serif"
+                android:textColor="#fff"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"/>
+
+            <TextView
+                android:id="@+id/tvActorRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans_serif"
+                android:textColor="@color/sexy_blue"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

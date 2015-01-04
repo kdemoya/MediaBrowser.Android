@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<resources>
+    <dimen name="grid_item_outer_padding">4dp</dimen>
+    <dimen name="grid_item_inner_padding">8dp</dimen>
+    <dimen name="grid_item_primary_text">22sp</dimen>
+    <dimen name="grid_item_secondary_text">19sp</dimen>
+    <dimen name="grid_item_tertiary_text">16sp</dimen>
+    <dimen name="grid_item_primary_text_poster">16sp</dimen>
+    <dimen name="grid_item_secondary_text_poster">15sp</dimen>
+    <dimen name="next_up_title">24sp</dimen>
+    <dimen name="next_up_series">18sp</dimen>
+    <dimen name="next_up_image_width">230dp</dimen>
+    <dimen name="next_up_image_height">129dp</dimen>
+    <dimen name="next_up_season">16sp</dimen>
+    <dimen name="next_up_overview">18sp</dimen>
+    <dimen name="header_padding">8dp</dimen>
+    <dimen name="header_text">24sp</dimen>
+    <dimen name="media_details_title">34sp</dimen>
+    <dimen name="media_details_tagline">30sp</dimen>
+    <dimen name="progress_bar_height">4dp</dimen>
+</resources>

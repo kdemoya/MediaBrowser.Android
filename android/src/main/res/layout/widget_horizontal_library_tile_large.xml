@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_gridview_selector"
+    android:padding="4dp">
+
+    <com.mb.android.widget.AnimatedNetworkImageView
+        android:id="@+id/ivLibraryTilePrimaryImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/tvOverlay"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignRight="@id/ivLibraryTilePrimaryImage"
+        android:layout_alignEnd="@id/ivLibraryTilePrimaryImage"
+        android:layout_marginRight="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/watched_circle"
+        android:gravity="center"
+        android:text="\u2714"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvMissingEpisodeOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff0000"
+        android:padding="2dp"
+        android:text="MISSING"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pbPlaybackProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="6dp"
+        android:layout_margin="2dp"
+        android:paddingBottom="2dp"
+        android:layout_alignLeft="@id/ivLibraryTilePrimaryImage"
+        android:layout_alignRight="@id/ivLibraryTilePrimaryImage"
+        android:layout_alignStart="@id/ivLibraryTilePrimaryImage"
+        android:layout_alignEnd="@id/ivLibraryTilePrimaryImage"
+        android:layout_alignParentBottom="true"
+        android:progressDrawable="@drawable/greenprogress"
+        style="?android:attr/progressBarStyleHorizontal" />
+
+</RelativeLayout>

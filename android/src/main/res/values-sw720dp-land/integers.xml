@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2013. Mark Linton.
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<resources>
+    <integer name="server_columns">3</integer>
+    <integer name="user_columns">3</integer>
+    <integer name="library_columns">4</integer>
+    <integer name="library_columns_poster">7</integer>
+    <integer name="homescreen_item_columns">4</integer>
+    <integer name="tv_library_columns_poster">7</integer>
+    <integer name="season_columns">3</integer>
+    <integer name="actor_columns">3</integer>
+    <integer name="next_up_columns">3</integer>
+    <integer name="max_item_width">266</integer>
+    <integer name="max_item_height">150</integer>
+</resources>

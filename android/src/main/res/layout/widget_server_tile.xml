@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llUserTile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/grid_item_outer_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30bbbbbb"
+        android:padding="@dimen/grid_item_inner_padding">
+
+        <ImageView
+            android:id="@+id/ivServerTileImage"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/grid_item_inner_padding"
+            android:layout_marginBottom="@dimen/grid_item_inner_padding"
+            android:contentDescription="@string/server_tile_icon"
+            android:scaleType="centerCrop"
+            android:src="@drawable/server_icon" />
+
+        <TextView
+            android:id="@+id/tvServerTileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/ivServerTileImage"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvServerIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvServerTileName"
+            android:layout_toRightOf="@+id/ivServerTileImage"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvServerExternalIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvServerIp"
+            android:layout_toRightOf="@+id/ivServerTileImage"
+            android:layout_marginBottom="@dimen/grid_item_inner_padding"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvConnected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/mediabrowser_blue"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="@string/connected"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

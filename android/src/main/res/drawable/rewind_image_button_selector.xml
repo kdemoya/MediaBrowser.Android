@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2013. Mark Linton. 
+  ~ This file and all it's contents are the property of Mark Linton, herefor referred to as the developer. This code may not be used or altered without the express consent of the developer.
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/player_rewind_pressed" android:state_pressed="true" />
+    <!-- pressed -->
+    <item android:drawable="@drawable/player_rewind_focused" android:state_focused="true" />
+    <!-- focused -->
+    <item android:drawable="@drawable/player_rewind" />
+    <!-- default -->
+</selector>

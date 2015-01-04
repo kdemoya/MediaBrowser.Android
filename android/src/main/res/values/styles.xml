@@ -1,0 +1,77 @@
+<resources>
+    <style name="AppTheme" parent="@style/Theme.AppCompat">
+        <item name="android:actionBarStyle">@style/MediaBrowserActionBar</item>
+        <!--<item name="android:windowActionBarOverlay">true</item>-->
+        <!--   your app branding color for the app bar -->
+        <!--<item name="android:colorForeground">@color/mediabrowser_foreground</item>-->
+        <!--<item name="android:textColorHighlight">@color/mediabrowser_foreground</item>-->
+    </style>
+
+    <style name="MediaBrowserActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/ab_gradient</item>
+        <!--<item name="android:background">#80000000</item>-->
+    </style>
+
+    <style name="RemoteControlTheme" parent="@style/Theme.AppCompat">
+        <item name="android:actionBarStyle">@style/RemoteControlActionBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="RemoteControlActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">#70000000</item>
+    </style>
+
+    <style name="button_text" >
+        <item name="android:layout_width" >wrap_content</item>
+        <item name="android:layout_height" >wrap_content</item>
+        <item name="android:textColor" >#ffffff</item>
+        <item name="android:gravity" >center</item>
+        <item name="android:layout_margin" >1dp</item>
+        <item name="android:textSize" >15sp</item>
+        <item name="android:textStyle" >bold</item>
+        <item name="android:shadowColor" >#000000</item>
+        <item name="android:shadowDx" >1</item>
+        <item name="android:shadowDy" >1</item>
+        <item name="android:shadowRadius" >2</item>
+        <item name="android:fontFamily" >sans-serif</item>
+    </style>
+
+    <style name="menu_text" >
+        <item name="android:layout_width" >wrap_content</item>
+        <item name="android:layout_height" >wrap_content</item>
+        <item name="android:textColor" >#ffffff</item>
+        <item name="android:gravity" >center</item>
+        <item name="android:layout_margin" >3dp</item>
+        <item name="android:textSize" >15sp</item>
+        <item name="android:textStyle" >bold</item>
+        <item name="android:shadowColor" >#000000</item>
+        <item name="android:shadowDx" >1</item>
+        <item name="android:shadowDy" >1</item>
+        <item name="android:shadowRadius" >2</item>
+    </style>
+
+    <style name="menu_selected_text" >
+        <item name="android:layout_width" >wrap_content</item>
+        <item name="android:layout_height" >wrap_content</item>
+        <item name="android:textColor" >#ffffff</item>
+        <item name="android:gravity" >center</item>
+        <item name="android:layout_margin" >3dp</item>
+        <item name="android:textSize" >15sp</item>
+        <item name="android:textStyle" >bold</item>
+        <item name="android:shadowColor" >#000000</item>
+        <item name="android:shadowDx" >1</item>
+        <item name="android:shadowDy" >1</item>
+        <item name="android:shadowRadius" >2</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="CastDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowTitleStyle">@style/CastDialogWindowTitle</item>
+    </style>
+
+    <style name="CastDialogWindowTitle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/mr_custom_title</item>
+    </style>
+
+</resources>
